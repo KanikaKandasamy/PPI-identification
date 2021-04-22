@@ -1,0 +1,517 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/scastlara/ppi@3035a2c94f724f54bbcb327e480aeb6393989ff0/ppi/data/style.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<div id="content">
+<h1>Protein protein interaction identification</h1>
+<hr>
+<h2>Summary</h1>
+<table class="summarytable">
+<tr>
+<td>Articles Analyzed</td>
+<td>87</td>
+</tr>
+<tr>
+<td>Total Sentences</td>
+<td>736</td>
+</tr>
+<tr>
+<td>Proteins found</td>
+<td>506</td>
+</tr>
+<tr>
+<td>Interactions retrieved</td>
+<td>33</td>
+</tr>
+<tr>
+<td>Unique interactions</td>
+<td>29</td>
+</tr>
+</table>
+<hr>
+<h2>Interactions</h2>
+<div class="reptable">
+<table id="inttable">
+<thead>
+<tr>
+<th>Confidence</th>
+<th>Protein (A)</th>
+<th>Protein (B)</th>
+<th>Off.symbol (A)</th>
+<th>Off.symbol (B)</th>
+<th>PMid</th>
+<th>Year</th>
+<th>Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.909</td>
+<td>HDAC1</td>
+<td>UHRF2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HDAC1&sort=score" target="_blank">HDAC1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UHRF2&sort=score" target="_blank">UHRF2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27743347" target="_blank">27743347</a></td>
+<td>2017</td>
+<td>We conducted a co-immunoprecipitation assay and found that TIP60 and <span class="prot"> HDAC1 </span> <span class="verb">interact</span> with <span class="prot"> UHRF2 </span> .</td>
+</tr>
+<tr>
+<td>0.72</td>
+<td>TIP60</td>
+<td>UHRF2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TIP60&sort=score" target="_blank">TIP60</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UHRF2&sort=score" target="_blank">UHRF2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27743347" target="_blank">27743347</a></td>
+<td>2017</td>
+<td>We conducted a co-immunoprecipitation assay and found that <span class="prot"> TIP60 </span> and HDAC1 <span class="verb">interact</span> with <span class="prot"> UHRF2 </span> .</td>
+</tr>
+<tr>
+<td>0.544</td>
+<td>Hsp27</td>
+<td>CBP</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HSP27&sort=score" target="_blank">HSP27</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CBP&sort=score" target="_blank">CBP</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30780033" target="_blank">30780033</a></td>
+<td>2019</td>
+<td>In the nucleus , <span class="prot"> Hsp27 </span> <span class="verb">bound</span> to <span class="prot"> CBP </span> and suppressed CBP acetyltransferase activity and the subsequent CBP-dependent acetylation of HMGB1 .</td>
+</tr>
+<tr>
+<td>0.465</td>
+<td>HSPB1</td>
+<td>ezrin</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HSPB1&sort=score" target="_blank">HSPB1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=EZRIN&sort=score" target="_blank">EZRIN</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31082616" target="_blank">31082616</a></td>
+<td>2020</td>
+<td><span class="prot"> HSPB1 </span> only <span class="verb">interacts</span> with inactive <span class="prot"> ezrin </span> and binds to the α-helical coiled coil region of ezrin .</td>
+</tr>
+<tr>
+<td>0.316</td>
+<td>TIP60</td>
+<td>UHRF2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TIP60&sort=score" target="_blank">TIP60</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UHRF2&sort=score" target="_blank">UHRF2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27743347" target="_blank">27743347</a></td>
+<td>2017</td>
+<td>Depletion or inhibition of <span class="prot"> TIP60 </span> <span class="verb">disrupts</span> the regulatory relationship between <span class="prot"> UHRF2 </span> , H3K9ac and H3K14ac .</td>
+</tr>
+<tr>
+<td>0.298</td>
+<td>GTPase</td>
+<td>ARF6</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=GTPASE&sort=score" target="_blank">GTPASE</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ARF6&sort=score" target="_blank">ARF6</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=32103017" target="_blank">32103017</a></td>
+<td>2020</td>
+<td>This allows the lysine myrisotylation-demyristoylation cycle to couple to and promote the <span class="prot"> GTPase </span> cycle of <span class="prot"> ARF6 </span> .</td>
+</tr>
+<tr>
+<td>0.293</td>
+<td>G3BP1</td>
+<td>HDAC6</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=G3BP1&sort=score" target="_blank">G3BP1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HDAC6&sort=score" target="_blank">HDAC6</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31481451" target="_blank">31481451</a></td>
+<td>2020</td>
+<td><span class="prot"> G3BP1 </span> acetylation <span class="verb">is</span> <span class="verb">regulated</span> by histone deacetylase 6 ( <span class="prot"> HDAC6 </span> ) and CBP/p300 .</td>
+</tr>
+<tr>
+<td>0.284</td>
+<td>CDYL</td>
+<td>histone Kcr</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CDYL&sort=score" target="_blank">CDYL</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HISTONE KCR&sort=score" target="_blank">HISTONE KCR</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28803779" target="_blank">28803779</a></td>
+<td>2017</td>
+<td>Here we report that the chromodomain Y-like transcription corepressor <span class="prot"> CDYL </span> negatively <span class="verb">regulates</span> <span class="prot"> histone Kcr </span> by acting as a crotonyl-CoA hydratase to convert crotonyl-CoA to β-hydroxybutyryl-CoA .</td>
+</tr>
+<tr>
+<td>0.249</td>
+<td>TIP30</td>
+<td>eEF1A</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TIP30&sort=score" target="_blank">TIP30</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=EEF1A&sort=score" target="_blank">EEF1A</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31468715" target="_blank">31468715</a></td>
+<td>2020</td>
+<td>Mechanistically , we identified a previously unknown anti-hypertrophic mechanism , whereby <span class="prot"> TIP30 </span> <span class="verb">binds</span> the eukaryotic elongation factor 1A ( <span class="prot"> eEF1A </span> ) to prevent the interaction with its essential co-factor eEF1B2 and translational elongation .</td>
+</tr>
+<tr>
+<td>0.213</td>
+<td>histone</td>
+<td>H3K9ac</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HISTONE&sort=score" target="_blank">HISTONE</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=H3K9AC&sort=score" target="_blank">H3K9AC</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30538157" target="_blank">30538157</a></td>
+<td>2020</td>
+<td>Moreover , this recruitment enables GCN5-mediated <span class="prot"> histone </span> acetylation to <span class="verb">enhance</span> <span class="prot"> H3K9ac </span> and enrich RNA polymerase II specifically at these genes for the development of drought tolerance .</td>
+</tr>
+<tr>
+<td>0.191</td>
+<td>HDAC3</td>
+<td>histone</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HDAC3&sort=score" target="_blank">HDAC3</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HISTONE&sort=score" target="_blank">HISTONE</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27733359" target="_blank">27733359</a></td>
+<td>2017</td>
+<td>Hence , inhibition of <span class="prot"> HDAC3 </span> can <span class="verb">restore</span> the enhancer <span class="prot"> histone </span> acetylation and may serve as a targeted therapy for CREBBP-mutant lymphomas .</td>
+</tr>
+<tr>
+<td>0.191</td>
+<td>TIP60</td>
+<td>UHRF2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TIP60&sort=score" target="_blank">TIP60</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UHRF2&sort=score" target="_blank">UHRF2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27743347" target="_blank">27743347</a></td>
+<td>2017</td>
+<td><span class="prot"> TIP60 </span> <span class="verb">is</span> <span class="verb">stabilized</span> in normal cells by <span class="prot"> UHRF2 </span> ubiquitination .</td>
+</tr>
+<tr>
+<td>0.147</td>
+<td>UHRF2</td>
+<td>H3K9ac</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UHRF2&sort=score" target="_blank">UHRF2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=H3K9AC&sort=score" target="_blank">H3K9AC</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27743347" target="_blank">27743347</a></td>
+<td>2017</td>
+<td>We previously demonstrated that <span class="prot"> UHRF2 </span> <span class="verb">regulated</span> <span class="prot"> H3K9ac </span> and H3K14ac differentially in normal and cancer cells .</td>
+</tr>
+<tr>
+<td>0.147</td>
+<td>G3BP1</td>
+<td>histone deacetylase 6</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=G3BP1&sort=score" target="_blank">G3BP1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HISTONE DEACETYLASE 6&sort=score" target="_blank">HISTONE DEACETYLASE 6</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31481451" target="_blank">31481451</a></td>
+<td>2020</td>
+<td><span class="prot"> G3BP1 </span> acetylation <span class="verb">is</span> <span class="verb">regulated</span> by <span class="prot"> histone deacetylase 6 </span> ( HDAC6 ) and CBP/p300 .</td>
+</tr>
+<tr>
+<td>0.142</td>
+<td>G3BP1</td>
+<td>CBP/p300</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=G3BP1&sort=score" target="_blank">G3BP1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CBP/P300&sort=score" target="_blank">CBP/P300</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31481451" target="_blank">31481451</a></td>
+<td>2020</td>
+<td><span class="prot"> G3BP1 </span> acetylation <span class="verb">is</span> <span class="verb">regulated</span> by histone deacetylase 6 ( HDAC6 ) and <span class="prot"> CBP/p300 </span> .</td>
+</tr>
+<tr>
+<td>0.138</td>
+<td>S-acyltransferase</td>
+<td>ZDHHC5</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=S-ACYLTRANSFERASE&sort=score" target="_blank">S-ACYLTRANSFERASE</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ZDHHC5&sort=score" target="_blank">ZDHHC5</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31631010" target="_blank">31631010</a></td>
+<td>2020</td>
+<td>CIL56-induced cell death requires a catalytically active protein <span class="prot"> S-acyltransferase </span> complex <span class="verb">comprising</span> the enzyme <span class="prot"> ZDHHC5 </span> and an accessory subunit GOLGA7 .</td>
+</tr>
+<tr>
+<td>0.124</td>
+<td>SIRT1</td>
+<td>OGG1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SIRT1&sort=score" target="_blank">SIRT1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=OGG1&sort=score" target="_blank">OGG1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25660075" target="_blank">25660075</a></td>
+<td>2015</td>
+<td>We investigated the factors involved in OGG1 acetylation and found that p300 and <span class="prot"> SIRT1 </span> <span class="verb">are</span> the major acetyltransferases for <span class="prot"> OGG1 </span> acetylation .</td>
+</tr>
+<tr>
+<td>0.12</td>
+<td>EndoMT</td>
+<td>Cpt2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ENDOMT&sort=score" target="_blank">ENDOMT</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CPT2&sort=score" target="_blank">CPT2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29429925" target="_blank">29429925</a></td>
+<td>2019</td>
+<td>Consistent with the known pathological effects of <span class="prot"> EndoMT </span> , adult <span class="prot"> Cpt2 </span> mice demonstrate increased permeability in multiple vascular beds .</td>
+</tr>
+<tr>
+<td>0.116</td>
+<td>Hsp27</td>
+<td>HMGB1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HSP27&sort=score" target="_blank">HSP27</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HMGB1&sort=score" target="_blank">HMGB1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30780033" target="_blank">30780033</a></td>
+<td>2019</td>
+<td>In the nucleus , <span class="prot"> Hsp27 </span> <span class="verb">bound</span> to CBP and <span class="verb">suppressed</span> CBP acetyltransferase activity and the subsequent CBP-dependent acetylation of <span class="prot"> HMGB1 </span> .</td>
+</tr>
+<tr>
+<td>0.111</td>
+<td>P/CAF</td>
+<td>histone acetyltransferase</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=P/CAF&sort=score" target="_blank">P/CAF</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HISTONE ACETYLTRANSFERASE&sort=score" target="_blank">HISTONE ACETYLTRANSFERASE</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=10365964" target="_blank">10365964</a></td>
+<td>1999</td>
+<td>The nature of the recognition of acetyl-lysine by the <span class="prot"> P/CAF </span> bromodomain <span class="verb">is</span> similar to that of acetyl-CoA by <span class="prot"> histone acetyltransferase </span> .</td>
+</tr>
+<tr>
+<td>0.111</td>
+<td>OGG1</td>
+<td>p300</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=OGG1&sort=score" target="_blank">OGG1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=P300&sort=score" target="_blank">P300</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25660075" target="_blank">25660075</a></td>
+<td>2015</td>
+<td>We investigated the factors involved in <span class="prot"> OGG1 </span> acetylation and <span class="verb">found</span> that <span class="prot"> p300 </span> and SIRT1 are the major acetyltransferases for OGG1 acetylation .</td>
+</tr>
+<tr>
+<td>0.107</td>
+<td>SIRT2</td>
+<td>AML12</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SIRT2&sort=score" target="_blank">SIRT2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=AML12&sort=score" target="_blank">AML12</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31197036" target="_blank">31197036</a></td>
+<td>2020</td>
+<td>Moreover , overexpressing <span class="prot"> SIRT2 </span> in <span class="prot"> AML12 </span> cells inhibited lipid accumulation , which was more efficiently reversed by overexpressing the ACLY-3KQ variant than by overexpressing WT ACLY .</td>
+</tr>
+<tr>
+<td>0.098</td>
+<td>SH3 domain</td>
+<td>GRB2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SH3 DOMAIN&sort=score" target="_blank">SH3 DOMAIN</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=GRB2&sort=score" target="_blank">GRB2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31462771" target="_blank">31462771</a></td>
+<td>2020</td>
+<td>Cytokine stimulation increases STAT3 palmitoylation by promoting the association between ZDHHC19 and STAT3 , which is mediated by the <span class="prot"> SH3 domain </span> of <span class="prot"> GRB2 </span> .</td>
+</tr>
+<tr>
+<td>0.096</td>
+<td>STAT3</td>
+<td>SH2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=STAT3&sort=score" target="_blank">STAT3</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SH2&sort=score" target="_blank">SH2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31462771" target="_blank">31462771</a></td>
+<td>2020</td>
+<td>Here we show that <span class="prot"> STAT3 </span> <span class="verb">is</span> post-translationally <span class="verb">S-palmitoylated</span> at the SRC homology 2 ( <span class="prot"> SH2 </span> ) domain , which promotes the dimerization and transcriptional activation of STAT3 .</td>
+</tr>
+<tr>
+<td>0.08</td>
+<td>ezrin</td>
+<td>actin</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=EZRIN&sort=score" target="_blank">EZRIN</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ACTIN&sort=score" target="_blank">ACTIN</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31082616" target="_blank">31082616</a></td>
+<td>2020</td>
+<td>Knockdown of HSPB1 resulted to the decline of phosphorylation at ezrin Thr567 , markedly suppressing the ability of <span class="prot"> ezrin </span> to <span class="verb">bind</span> to the <span class="prot"> actin </span> cytoskeleton and migration of ESCC cells .</td>
+</tr>
+<tr>
+<td>0.08</td>
+<td>SIRT2</td>
+<td>ARF6</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SIRT2&sort=score" target="_blank">SIRT2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ARF6&sort=score" target="_blank">ARF6</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=32103017" target="_blank">32103017</a></td>
+<td>2020</td>
+<td>We demonstrate that the NAD - dependent deacylase SIRT2 removes the myristoyl group , and our evidence suggests that NMT prefers the GTP-bound while <span class="prot"> SIRT2 </span> <span class="verb">prefers</span> the GDP-bound <span class="prot"> ARF6 </span> .</td>
+</tr>
+<tr>
+<td>0.058</td>
+<td>UHRF2</td>
+<td>H3K14ac</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UHRF2&sort=score" target="_blank">UHRF2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=H3K14AC&sort=score" target="_blank">H3K14AC</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27743347" target="_blank">27743347</a></td>
+<td>2017</td>
+<td>We previously demonstrated that <span class="prot"> UHRF2 </span> <span class="verb">regulated</span> H3K9ac and <span class="prot"> H3K14ac </span> differentially in normal and cancer cells .</td>
+</tr>
+<tr>
+<td>0.053</td>
+<td>Rab7</td>
+<td>NPC1 cholesterol transporter</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=RAB7&sort=score" target="_blank">RAB7</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=NPC1 CHOLESTEROL TRANSPORTER&sort=score" target="_blank">NPC1 CHOLESTEROL TRANSPORTER</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=33144569" target="_blank">33144569</a></td>
+<td>2020</td>
+<td>We find that active <span class="prot"> Rab7 </span> <span class="verb">interacts</span> with the <span class="prot"> NPC1 cholesterol transporter </span> and licenses lysosomal cholesterol export .</td>
+</tr>
+<tr>
+<td>0.053</td>
+<td>Hsp27</td>
+<td>HMGB1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HSP27&sort=score" target="_blank">HSP27</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HMGB1&sort=score" target="_blank">HMGB1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30780033" target="_blank">30780033</a></td>
+<td>2019</td>
+<td>In the present study , we investigated the effects of <span class="prot"> Hsp27 </span> on <span class="prot"> HMGB1 </span> translocation from the nucleus to the cytoplasm in THP-1 cells .</td>
+</tr>
+<tr>
+<td>0.044</td>
+<td>TIP60</td>
+<td>H3K9ac</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TIP60&sort=score" target="_blank">TIP60</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=H3K9AC&sort=score" target="_blank">H3K9AC</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27743347" target="_blank">27743347</a></td>
+<td>2017</td>
+<td>Depletion or inhibition of <span class="prot"> TIP60 </span> <span class="verb">disrupts</span> the regulatory relationship between UHRF2 , <span class="prot"> H3K9ac </span> and H3K14ac .</td>
+</tr>
+<tr>
+<td>0.04</td>
+<td>STAT3</td>
+<td>ZDHHC19</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=STAT3&sort=score" target="_blank">STAT3</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ZDHHC19&sort=score" target="_blank">ZDHHC19</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31462771" target="_blank">31462771</a></td>
+<td>2020</td>
+<td>Cytokine stimulation increases <span class="prot"> STAT3 </span> palmitoylation by <span class="verb">promoting</span> the association between <span class="prot"> ZDHHC19 </span> and STAT3 , which is mediated by the SH3 domain of GRB2 .</td>
+</tr>
+<tr>
+<td>0.027</td>
+<td>TIP30</td>
+<td>eukaryotic elongation factor 1A</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TIP30&sort=score" target="_blank">TIP30</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=EUKARYOTIC ELONGATION FACTOR 1A&sort=score" target="_blank">EUKARYOTIC ELONGATION FACTOR 1A</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31468715" target="_blank">31468715</a></td>
+<td>2020</td>
+<td>Mechanistically , we identified a previously unknown anti-hypertrophic mechanism , whereby <span class="prot"> TIP30 </span> <span class="verb">binds</span> the <span class="prot"> eukaryotic elongation factor 1A </span> ( eEF1A ) to prevent the interaction with its essential co-factor eEF1B2 and translational elongation .</td>
+</tr>
+<tr>
+<td>0.022</td>
+<td>TIP60</td>
+<td>UHRF2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TIP60&sort=score" target="_blank">TIP60</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UHRF2&sort=score" target="_blank">UHRF2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27743347" target="_blank">27743347</a></td>
+<td>2017</td>
+<td>In this study , we found that <span class="prot"> TIP60 </span> <span class="verb">acted</span> downstream of <span class="prot"> UHRF2 </span> to regulate H3K9ac and H3K14ac expression .</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/scastlara/ppi@51b2e7885ca0553adced1d5d362c6f0315ac12d9/ppi/data/cytoscape_template.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+                    <script>
+                        graphelements = {
+nodes: [
+{ data: { id: 'HDAC1', name: 'HDAC1', colorNODE: '#4b849d' } },
+{ data: { id: 'UHRF2', name: 'UHRF2', colorNODE: '#4b849d' } },
+{ data: { id: 'TIP60', name: 'TIP60', colorNODE: '#4b849d' } },
+{ data: { id: 'UHRF2', name: 'UHRF2', colorNODE: '#4b849d' } },
+{ data: { id: 'HSP27', name: 'HSP27', colorNODE: '#4b849d' } },
+{ data: { id: 'CBP', name: 'CBP', colorNODE: '#4b849d' } },
+{ data: { id: 'HSPB1', name: 'HSPB1', colorNODE: '#4b849d' } },
+{ data: { id: 'EZRIN', name: 'EZRIN', colorNODE: '#4b849d' } },
+{ data: { id: 'TIP60', name: 'TIP60', colorNODE: '#4b849d' } },
+{ data: { id: 'UHRF2', name: 'UHRF2', colorNODE: '#4b849d' } },
+{ data: { id: 'GTPASE', name: 'GTPASE', colorNODE: '#4b849d' } },
+{ data: { id: 'ARF6', name: 'ARF6', colorNODE: '#4b849d' } },
+{ data: { id: 'G3BP1', name: 'G3BP1', colorNODE: '#4b849d' } },
+{ data: { id: 'HDAC6', name: 'HDAC6', colorNODE: '#4b849d' } },
+{ data: { id: 'CDYL', name: 'CDYL', colorNODE: '#4b849d' } },
+{ data: { id: 'HISTONE KCR', name: 'HISTONE KCR', colorNODE: '#4b849d' } },
+{ data: { id: 'TIP30', name: 'TIP30', colorNODE: '#4b849d' } },
+{ data: { id: 'EEF1A', name: 'EEF1A', colorNODE: '#4b849d' } },
+{ data: { id: 'HISTONE', name: 'HISTONE', colorNODE: '#4b849d' } },
+{ data: { id: 'H3K9AC', name: 'H3K9AC', colorNODE: '#4b849d' } },
+{ data: { id: 'HDAC3', name: 'HDAC3', colorNODE: '#4b849d' } },
+{ data: { id: 'HISTONE', name: 'HISTONE', colorNODE: '#4b849d' } },
+{ data: { id: 'TIP60', name: 'TIP60', colorNODE: '#4b849d' } },
+{ data: { id: 'UHRF2', name: 'UHRF2', colorNODE: '#4b849d' } },
+{ data: { id: 'UHRF2', name: 'UHRF2', colorNODE: '#4b849d' } },
+{ data: { id: 'H3K9AC', name: 'H3K9AC', colorNODE: '#4b849d' } },
+{ data: { id: 'G3BP1', name: 'G3BP1', colorNODE: '#4b849d' } },
+{ data: { id: 'HISTONE DEACETYLASE 6', name: 'HISTONE DEACETYLASE 6', colorNODE: '#4b849d' } },
+{ data: { id: 'G3BP1', name: 'G3BP1', colorNODE: '#4b849d' } },
+{ data: { id: 'CBP/P300', name: 'CBP/P300', colorNODE: '#4b849d' } },
+{ data: { id: 'S-ACYLTRANSFERASE', name: 'S-ACYLTRANSFERASE', colorNODE: '#4b849d' } },
+{ data: { id: 'ZDHHC5', name: 'ZDHHC5', colorNODE: '#4b849d' } },
+{ data: { id: 'SIRT1', name: 'SIRT1', colorNODE: '#4b849d' } },
+{ data: { id: 'OGG1', name: 'OGG1', colorNODE: '#4b849d' } },
+{ data: { id: 'ENDOMT', name: 'ENDOMT', colorNODE: '#4b849d' } },
+{ data: { id: 'CPT2', name: 'CPT2', colorNODE: '#4b849d' } },
+{ data: { id: 'HSP27', name: 'HSP27', colorNODE: '#4b849d' } },
+{ data: { id: 'HMGB1', name: 'HMGB1', colorNODE: '#4b849d' } },
+{ data: { id: 'P/CAF', name: 'P/CAF', colorNODE: '#4b849d' } },
+{ data: { id: 'HISTONE ACETYLTRANSFERASE', name: 'HISTONE ACETYLTRANSFERASE', colorNODE: '#4b849d' } },
+{ data: { id: 'OGG1', name: 'OGG1', colorNODE: '#4b849d' } },
+{ data: { id: 'P300', name: 'P300', colorNODE: '#4b849d' } },
+{ data: { id: 'SIRT2', name: 'SIRT2', colorNODE: '#4b849d' } },
+{ data: { id: 'AML12', name: 'AML12', colorNODE: '#4b849d' } },
+{ data: { id: 'SH3 DOMAIN', name: 'SH3 DOMAIN', colorNODE: '#4b849d' } },
+{ data: { id: 'GRB2', name: 'GRB2', colorNODE: '#4b849d' } },
+{ data: { id: 'STAT3', name: 'STAT3', colorNODE: '#4b849d' } },
+{ data: { id: 'SH2', name: 'SH2', colorNODE: '#4b849d' } },
+{ data: { id: 'EZRIN', name: 'EZRIN', colorNODE: '#4b849d' } },
+{ data: { id: 'ACTIN', name: 'ACTIN', colorNODE: '#4b849d' } },
+{ data: { id: 'SIRT2', name: 'SIRT2', colorNODE: '#4b849d' } },
+{ data: { id: 'ARF6', name: 'ARF6', colorNODE: '#4b849d' } },
+{ data: { id: 'UHRF2', name: 'UHRF2', colorNODE: '#4b849d' } },
+{ data: { id: 'H3K14AC', name: 'H3K14AC', colorNODE: '#4b849d' } },
+{ data: { id: 'RAB7', name: 'RAB7', colorNODE: '#4b849d' } },
+{ data: { id: 'NPC1 CHOLESTEROL TRANSPORTER', name: 'NPC1 CHOLESTEROL TRANSPORTER', colorNODE: '#4b849d' } },
+{ data: { id: 'HSP27', name: 'HSP27', colorNODE: '#4b849d' } },
+{ data: { id: 'HMGB1', name: 'HMGB1', colorNODE: '#4b849d' } },
+{ data: { id: 'TIP60', name: 'TIP60', colorNODE: '#4b849d' } },
+{ data: { id: 'H3K9AC', name: 'H3K9AC', colorNODE: '#4b849d' } },
+{ data: { id: 'STAT3', name: 'STAT3', colorNODE: '#4b849d' } },
+{ data: { id: 'ZDHHC19', name: 'ZDHHC19', colorNODE: '#4b849d' } },
+{ data: { id: 'TIP30', name: 'TIP30', colorNODE: '#4b849d' } },
+{ data: { id: 'EUKARYOTIC ELONGATION FACTOR 1A', name: 'EUKARYOTIC ELONGATION FACTOR 1A', colorNODE: '#4b849d' } },
+{ data: { id: 'TIP60', name: 'TIP60', colorNODE: '#4b849d' } },
+{ data: { id: 'UHRF2', name: 'UHRF2', colorNODE: '#4b849d' } },
+], edges: [
+{ data: { id: 'HDAC1-UHRF2', source: 'HDAC1', target: 'UHRF2', confidence:'0.609', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TIP60-UHRF2', source: 'TIP60', target: 'UHRF2', confidence:'0.52', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HSP27-CBP', source: 'HSP27', target: 'CBP', confidence:'0.444', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HSPB1-EZRIN', source: 'HSPB1', target: 'EZRIN', confidence:'0.364', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TIP60-UHRF2', source: 'TIP60', target: 'UHRF2', confidence:'0.316', colorEDGE: '#cdbb44' }},
+{ data: { id: 'GTPASE-ARF6', source: 'GTPASE', target: 'ARF6', confidence:'0.298', colorEDGE: '#cdbb44' }},
+{ data: { id: 'G3BP1-HDAC6', source: 'G3BP1', target: 'HDAC6', confidence:'0.293', colorEDGE: '#cdbb44' }},
+{ data: { id: 'CDYL-HISTONE KCR', source: 'CDYL', target: 'HISTONE KCR', confidence:'0.284', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TIP30-EEF1A', source: 'TIP30', target: 'EEF1A', confidence:'0.249', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HISTONE-H3K9AC', source: 'HISTONE', target: 'H3K9AC', confidence:'0.213', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HDAC3-HISTONE', source: 'HDAC3', target: 'HISTONE', confidence:'0.191', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TIP60-UHRF2', source: 'TIP60', target: 'UHRF2', confidence:'0.191', colorEDGE: '#cdbb44' }},
+{ data: { id: 'UHRF2-H3K9AC', source: 'UHRF2', target: 'H3K9AC', confidence:'0.147', colorEDGE: '#cdbb44' }},
+{ data: { id: 'G3BP1-HISTONE DEACETYLASE 6', source: 'G3BP1', target: 'HISTONE DEACETYLASE 6', confidence:'0.147', colorEDGE: '#cdbb44' }},
+{ data: { id: 'G3BP1-CBP/P300', source: 'G3BP1', target: 'CBP/P300', confidence:'0.142', colorEDGE: '#cdbb44' }},
+{ data: { id: 'S-ACYLTRANSFERASE-ZDHHC5', source: 'S-ACYLTRANSFERASE', target: 'ZDHHC5', confidence:'0.138', colorEDGE: '#cdbb44' }},
+{ data: { id: 'SIRT1-OGG1', source: 'SIRT1', target: 'OGG1', confidence:'0.124', colorEDGE: '#cdbb44' }},
+{ data: { id: 'ENDOMT-CPT2', source: 'ENDOMT', target: 'CPT2', confidence:'0.12', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HSP27-HMGB1', source: 'HSP27', target: 'HMGB1', confidence:'0.116', colorEDGE: '#cdbb44' }},
+{ data: { id: 'P/CAF-HISTONE ACETYLTRANSFERASE', source: 'P/CAF', target: 'HISTONE ACETYLTRANSFERASE', confidence:'0.111', colorEDGE: '#cdbb44' }},
+{ data: { id: 'OGG1-P300', source: 'OGG1', target: 'P300', confidence:'0.111', colorEDGE: '#cdbb44' }},
+{ data: { id: 'SIRT2-AML12', source: 'SIRT2', target: 'AML12', confidence:'0.107', colorEDGE: '#cdbb44' }},
+{ data: { id: 'SH3 DOMAIN-GRB2', source: 'SH3 DOMAIN', target: 'GRB2', confidence:'0.098', colorEDGE: '#cdbb44' }},
+{ data: { id: 'STAT3-SH2', source: 'STAT3', target: 'SH2', confidence:'0.096', colorEDGE: '#cdbb44' }},
+{ data: { id: 'EZRIN-ACTIN', source: 'EZRIN', target: 'ACTIN', confidence:'0.08', colorEDGE: '#cdbb44' }},
+{ data: { id: 'SIRT2-ARF6', source: 'SIRT2', target: 'ARF6', confidence:'0.08', colorEDGE: '#cdbb44' }},
+{ data: { id: 'UHRF2-H3K14AC', source: 'UHRF2', target: 'H3K14AC', confidence:'0.058', colorEDGE: '#cdbb44' }},
+{ data: { id: 'RAB7-NPC1 CHOLESTEROL TRANSPORTER', source: 'RAB7', target: 'NPC1 CHOLESTEROL TRANSPORTER', confidence:'0.053', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HSP27-HMGB1', source: 'HSP27', target: 'HMGB1', confidence:'0.053', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TIP60-H3K9AC', source: 'TIP60', target: 'H3K9AC', confidence:'0.044', colorEDGE: '#cdbb44' }},
+{ data: { id: 'STAT3-ZDHHC19', source: 'STAT3', target: 'ZDHHC19', confidence:'0.04', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TIP30-EUKARYOTIC ELONGATION FACTOR 1A', source: 'TIP30', target: 'EUKARYOTIC ELONGATION FACTOR 1A', confidence:'0.027', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TIP60-UHRF2', source: 'TIP60', target: 'UHRF2', confidence:'0.022', colorEDGE: '#cdbb44' }},
+]
+
+};
+                        cy.load(graphelements);
+                        cy.layout( { name: 'cose' } );
+                    </script>
+                    <script>
+                    $(document).ready(function(){
+                        $('#inttable').DataTable({
+                            "order": [[ 0, "desc" ]]
+                        });
+                        $('#prottable').DataTable({
+                            "order": [[ 1, "desc" ]]
+                        });
+                    });
+                    </script>
+                    
+</body>
+<html>

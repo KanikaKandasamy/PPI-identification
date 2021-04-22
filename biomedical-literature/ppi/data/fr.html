@@ -1,0 +1,270 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/scastlara/ppaxe@3035a2c94f724f54bbcb327e480aeb6393989ff0/ppaxe/data/style.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<div id="content">
+<h1>Protein protein interaction identification</h1>
+<hr>
+<h2>Summary</h1>
+<table class="summarytable">
+<tr>
+<td>Articles Analyzed</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Total Sentences</td>
+<td>89</td>
+</tr>
+<tr>
+<td>Proteins found</td>
+<td>45</td>
+</tr>
+<tr>
+<td>Interactions retrieved</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Unique interactions</td>
+<td>11</td>
+</tr>
+</table>
+<hr>
+<h2>Interactions</h2>
+<div class="reptable">
+<table id="inttable">
+<thead>
+<tr>
+<th>Confidence</th>
+<th>Protein (A)</th>
+<th>Protein (B)</th>
+<th>Off.symbol (A)</th>
+<th>Off.symbol (B)</th>
+<th>PMid</th>
+<th>Year</th>
+<th>Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.316</td>
+<td>PAX8</td>
+<td>hTERT</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PAX8&sort=score" target="_blank">PAX8</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HTERT&sort=score" target="_blank">HTERT</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=18632625" target="_blank">18632625</a></td>
+<td>2008</td>
+<td>By electrophoretic mobility shift assay , quantitative PCR , and a telomerase activity assay , we show that <span class="prot"> PAX8 </span> <span class="verb">binds</span> directly to the <span class="prot"> hTERT </span> and hTR promoters , up-regulating hTERT and hTR mRNA , as well as telomerase activity .</td>
+</tr>
+<tr>
+<td>0.222</td>
+<td>telomerase</td>
+<td>hTERT</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TELOMERASE&sort=score" target="_blank">TELOMERASE</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HTERT&sort=score" target="_blank">HTERT</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16170363" target="_blank">16170363</a></td>
+<td>2006</td>
+<td>Basal <span class="prot"> telomerase </span> activity <span class="verb">is</span> dependent on expression of the <span class="prot"> hTERT </span> and hTR genes and upregulation of telomerase gene expression is associated with tumour development .</td>
+</tr>
+<tr>
+<td>0.209</td>
+<td>PAX8</td>
+<td>hTR</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PAX8&sort=score" target="_blank">PAX8</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HTR&sort=score" target="_blank">HTR</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=18632625" target="_blank">18632625</a></td>
+<td>2008</td>
+<td>By electrophoretic mobility shift assay , quantitative PCR , and a telomerase activity assay , we show that <span class="prot"> PAX8 </span> <span class="verb">binds</span> directly to the hTERT and <span class="prot"> hTR </span> promoters , up-regulating hTERT and hTR mRNA , as well as telomerase activity .</td>
+</tr>
+<tr>
+<td>0.16</td>
+<td>Gas6</td>
+<td>Axl</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=GAS6&sort=score" target="_blank">GAS6</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=AXL&sort=score" target="_blank">AXL</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=9160883" target="_blank">9160883</a></td>
+<td>1997</td>
+<td><span class="prot"> Gas6 </span> <span class="verb">has</span> previously <span class="verb">been</span> <span class="verb">shown</span> to <span class="verb">activate</span> both <span class="prot"> Axl </span> and Rse/Tyro3 , two other receptor tyrosine kinases in the same family as Mer .</td>
+</tr>
+<tr>
+<td>0.138</td>
+<td>PAX8</td>
+<td>hTR</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PAX8&sort=score" target="_blank">PAX8</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HTR&sort=score" target="_blank">HTR</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=18632625" target="_blank">18632625</a></td>
+<td>2008</td>
+<td>Additionally , <span class="prot"> PAX8 </span> small <span class="verb">interfering</span> RNA <span class="verb">down-regulated</span> hTERT and <span class="prot"> hTR </span> .</td>
+</tr>
+<tr>
+<td>0.133</td>
+<td>Gas6</td>
+<td>Rse/Tyro3</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=GAS6&sort=score" target="_blank">GAS6</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=RSE/TYRO3&sort=score" target="_blank">RSE/TYRO3</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=9160883" target="_blank">9160883</a></td>
+<td>1997</td>
+<td><span class="prot"> Gas6 </span> <span class="verb">has</span> previously <span class="verb">been</span> <span class="verb">shown</span> to <span class="verb">activate</span> both Axl and <span class="prot"> Rse/Tyro3 </span> , two other receptor tyrosine kinases in the same family as Mer .</td>
+</tr>
+<tr>
+<td>0.124</td>
+<td>PFKFB4</td>
+<td>SRC-3</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PFKFB4&sort=score" target="_blank">PFKFB4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SRC-3&sort=score" target="_blank">SRC-3</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29615789" target="_blank">29615789</a></td>
+<td>2018</td>
+<td><span class="prot"> PFKFB4 </span> <span class="verb">phosphorylates</span> <span class="prot"> SRC-3 </span> at serine 857 and enhances its transcriptional activity , whereas either suppression of PFKFB4 or ectopic expression of a phosphorylation-deficient Ser857Ala mutant SRC-3 abolishes the SRC-3-mediated transcriptional output .</td>
+</tr>
+<tr>
+<td>0.12</td>
+<td>PAX8</td>
+<td>hTERT</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PAX8&sort=score" target="_blank">PAX8</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HTERT&sort=score" target="_blank">HTERT</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=18632625" target="_blank">18632625</a></td>
+<td>2008</td>
+<td>Additionally , <span class="prot"> PAX8 </span> small <span class="verb">interfering</span> RNA <span class="verb">down-regulated</span> <span class="prot"> hTERT </span> and hTR .</td>
+</tr>
+<tr>
+<td>0.062</td>
+<td>hTERT</td>
+<td>telomerase</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HTERT&sort=score" target="_blank">HTERT</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TELOMERASE&sort=score" target="_blank">TELOMERASE</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15112252" target="_blank">15112252</a></td>
+<td>2004</td>
+<td>Activation of telomerase activity was strongly correlated with hTERT mRNA expression , suggesting <span class="prot"> hTERT </span> <span class="verb">is</span> a major regulator of <span class="prot"> telomerase </span> activity , and telomerase activation may play a critical role in esophageal carcinogenesis .</td>
+</tr>
+<tr>
+<td>0.049</td>
+<td>Mer</td>
+<td>Gas6</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MER&sort=score" target="_blank">MER</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=GAS6&sort=score" target="_blank">GAS6</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=9160883" target="_blank">9160883</a></td>
+<td>1997</td>
+<td>We also observed a transient activation of p42 MAP kinase following activation of <span class="prot"> Mer </span> by <span class="prot"> Gas6 </span> .</td>
+</tr>
+<tr>
+<td>0.031</td>
+<td>TRF2</td>
+<td>POT1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TRF2&sort=score" target="_blank">TRF2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=POT1&sort=score" target="_blank">POT1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26330309" target="_blank">26330309</a></td>
+<td>2016</td>
+<td>The telomere shelterins TRF1 , TRF2 , and POT1 were upregulated in granulocytes , and <span class="prot"> TRF2 </span> <span class="verb">was</span> <span class="verb">upregulated</span> and <span class="prot"> POT1 </span> downregulated in monocytes .</td>
+</tr>
+<tr>
+<td>0.0</td>
+<td>ATF4</td>
+<td>SRC-3</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ATF4&sort=score" target="_blank">ATF4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SRC-3&sort=score" target="_blank">SRC-3</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29615789" target="_blank">29615789</a></td>
+<td>2018</td>
+<td>Mechanistically , phosphorylation of SRC-3 at Ser857 increases its interaction with the transcription factor <span class="prot"> ATF4 </span> by <span class="verb">stabilizing</span> the recruitment of <span class="prot"> SRC-3 </span> and ATF4 to target gene promoters .</td>
+</tr>
+<tr>
+<td>0.0</td>
+<td>p42 MAP kinase</td>
+<td>Mer</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=P42 MAP KINASE&sort=score" target="_blank">P42 MAP KINASE</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MER&sort=score" target="_blank">MER</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=9160883" target="_blank">9160883</a></td>
+<td>1997</td>
+<td>We also observed a transient activation of <span class="prot"> p42 MAP kinase </span> <span class="verb">following</span> activation of <span class="prot"> Mer </span> by Gas6 .</td>
+</tr>
+<tr>
+<td>0.0</td>
+<td>telomerase</td>
+<td>hTR genes</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TELOMERASE&sort=score" target="_blank">TELOMERASE</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HTR GENES&sort=score" target="_blank">HTR GENES</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16170363" target="_blank">16170363</a></td>
+<td>2006</td>
+<td>Basal <span class="prot"> telomerase </span> activity <span class="verb">is</span> dependent on expression of the hTERT and <span class="prot"> hTR genes </span> and upregulation of telomerase gene expression is associated with tumour development .</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/scastlara/ppaxe@51b2e7885ca0553adced1d5d362c6f0315ac12d9/ppaxe/data/cytoscape_template.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+                    <script>
+                        graphelements = {
+nodes: [
+{ data: { id: 'PAX8', name: 'PAX8', colorNODE: '#4b849d' } },
+{ data: { id: 'HTERT', name: 'HTERT', colorNODE: '#4b849d' } },
+{ data: { id: 'TELOMERASE', name: 'TELOMERASE', colorNODE: '#4b849d' } },
+{ data: { id: 'HTERT', name: 'HTERT', colorNODE: '#4b849d' } },
+{ data: { id: 'PAX8', name: 'PAX8', colorNODE: '#4b849d' } },
+{ data: { id: 'HTR', name: 'HTR', colorNODE: '#4b849d' } },
+{ data: { id: 'GAS6', name: 'GAS6', colorNODE: '#4b849d' } },
+{ data: { id: 'AXL', name: 'AXL', colorNODE: '#4b849d' } },
+{ data: { id: 'PAX8', name: 'PAX8', colorNODE: '#4b849d' } },
+{ data: { id: 'HTR', name: 'HTR', colorNODE: '#4b849d' } },
+{ data: { id: 'GAS6', name: 'GAS6', colorNODE: '#4b849d' } },
+{ data: { id: 'RSE/TYRO3', name: 'RSE/TYRO3', colorNODE: '#4b849d' } },
+{ data: { id: 'PFKFB4', name: 'PFKFB4', colorNODE: '#4b849d' } },
+{ data: { id: 'SRC-3', name: 'SRC-3', colorNODE: '#4b849d' } },
+{ data: { id: 'PAX8', name: 'PAX8', colorNODE: '#4b849d' } },
+{ data: { id: 'HTERT', name: 'HTERT', colorNODE: '#4b849d' } },
+{ data: { id: 'HTERT', name: 'HTERT', colorNODE: '#4b849d' } },
+{ data: { id: 'TELOMERASE', name: 'TELOMERASE', colorNODE: '#4b849d' } },
+{ data: { id: 'MER', name: 'MER', colorNODE: '#4b849d' } },
+{ data: { id: 'GAS6', name: 'GAS6', colorNODE: '#4b849d' } },
+{ data: { id: 'TRF2', name: 'TRF2', colorNODE: '#4b849d' } },
+{ data: { id: 'POT1', name: 'POT1', colorNODE: '#4b849d' } },
+{ data: { id: 'ATF4', name: 'ATF4', colorNODE: '#4b849d' } },
+{ data: { id: 'SRC-3', name: 'SRC-3', colorNODE: '#4b849d' } },
+{ data: { id: 'P42 MAP KINASE', name: 'P42 MAP KINASE', colorNODE: '#4b849d' } },
+{ data: { id: 'MER', name: 'MER', colorNODE: '#4b849d' } },
+{ data: { id: 'TELOMERASE', name: 'TELOMERASE', colorNODE: '#4b849d' } },
+{ data: { id: 'HTR GENES', name: 'HTR GENES', colorNODE: '#4b849d' } },
+], edges: [
+{ data: { id: 'PAX8-HTERT', source: 'PAX8', target: 'HTERT', confidence:'0.316', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TELOMERASE-HTERT', source: 'TELOMERASE', target: 'HTERT', confidence:'0.222', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PAX8-HTR', source: 'PAX8', target: 'HTR', confidence:'0.209', colorEDGE: '#cdbb44' }},
+{ data: { id: 'GAS6-AXL', source: 'GAS6', target: 'AXL', confidence:'0.16', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PAX8-HTR', source: 'PAX8', target: 'HTR', confidence:'0.138', colorEDGE: '#cdbb44' }},
+{ data: { id: 'GAS6-RSE/TYRO3', source: 'GAS6', target: 'RSE/TYRO3', confidence:'0.133', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PFKFB4-SRC-3', source: 'PFKFB4', target: 'SRC-3', confidence:'0.124', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PAX8-HTERT', source: 'PAX8', target: 'HTERT', confidence:'0.12', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HTERT-TELOMERASE', source: 'HTERT', target: 'TELOMERASE', confidence:'0.062', colorEDGE: '#cdbb44' }},
+{ data: { id: 'MER-GAS6', source: 'MER', target: 'GAS6', confidence:'0.049', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TRF2-POT1', source: 'TRF2', target: 'POT1', confidence:'0.031', colorEDGE: '#cdbb44' }},
+{ data: { id: 'ATF4-SRC-3', source: 'ATF4', target: 'SRC-3', confidence:'0.0', colorEDGE: '#cdbb44' }},
+{ data: { id: 'P42 MAP KINASE-MER', source: 'P42 MAP KINASE', target: 'MER', confidence:'0.0', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TELOMERASE-HTR GENES', source: 'TELOMERASE', target: 'HTR GENES', confidence:'0.0', colorEDGE: '#cdbb44' }},
+]
+
+};
+                        cy.load(graphelements);
+                        cy.layout( { name: 'cose' } );
+                    </script>
+                    <script>
+                    $(document).ready(function(){
+                        $('#inttable').DataTable({
+                            "order": [[ 0, "desc" ]]
+                        });
+                        $('#prottable').DataTable({
+                            "order": [[ 1, "desc" ]]
+                        });
+                    });
+                    </script>
+                    
+</body>
+<html>

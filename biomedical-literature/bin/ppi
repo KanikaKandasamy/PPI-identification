@@ -1,0 +1,169 @@
+#!/usr/bin/env python
+
+from ppi import core
+from ppi import report
+import argparse
+import sys
+import os
+import logging as log
+import time
+from datetime import datetime
+from pycorenlp import StanfordCoreNLP
+
+
+# OPTIONS
+def get_options():
+    '''
+    Reads the options
+    '''
+    parser = argparse.ArgumentParser(description='''Command-line tool to retrieve protein-protein interactions
+    from the scientific literature.''')
+    parser.add_argument(
+        '-p','--pmids',
+        help='Text file with a list of PMids or PMCids', required=True
+    )
+    parser.add_argument(
+        '-d','--database',
+        help='Download whole articles from database "PMC", or only abstracts from "PUBMED".',
+        default="PUBMED"
+    )
+    parser.add_argument(
+        '-o', '--output',
+        help='Output file to print the retrieved interactions in tabular format.'
+    )
+    parser.add_argument(
+    '-r', '--report',
+    help="Print html report with the specified name."
+    )
+    parser.add_argument(
+        '-i', '--ip',
+        help="Change the IP address of the StanfordCoreNLP server. Default: http://localhost:9000",
+        default="http://localhost:9000"
+    )
+    parser.add_argument(
+        '-v', '--verbose',
+        help="Increase output verbosity.",
+        action="store_true"
+    )
+    parser.add_argument(
+        '-e', '--exclude',
+        help="Exclude protein symbols not annotated in dictionary.",
+        action="store_true",
+        default=False
+    )
+
+    try:
+        options = parser.parse_args()
+    except argparse.ArgumentError:
+        parser.print_help()
+        sys.exit(0)
+
+    return options
+
+def read_identifiers(filename):
+    '''
+    Reads PMC or PubMed identifiers from filename
+    '''
+    pmids = list()
+    if os.path.exists(filename):
+        with open(filename, "r") as f:
+            for line in f:
+                line = line.strip()
+                pmids.append(line)
+    else:
+        log.error("%s does not exist!", filename)
+        sys.exit(1)
+
+    return list(set(pmids))
+
+def get_ppi(options, start_time, pmids):
+    '''
+    Gets protein-protein interactions
+    '''
+    log.info("%s identifiers read.", len(pmids))
+    query = core.PMQuery(ids=pmids, database=options.database)
+    query.get_articles()
+    log.info("%s articles found", len(query.articles))
+    stats = dict({
+        'total_articles':   0,
+        'total_sentences':  0,
+        'total_candidates': 0,
+        'total_interacts':  0
+    })
+    # Open output if needed
+    if options.output:
+        ofh = open(options.output, "w")
+    for article in query:
+        if stats['total_articles'] % 5 == 0:
+            log.info(
+                """~%s seconds.\n      %s articles analyzed.\n      %s sentences analyzed.\n      %s candidates found.\n      %s interactions retrieved.
+                """, round(time.time() - start_time), stats['total_articles'], stats['total_sentences'], stats['total_candidates'], stats['total_interacts'])
+        stats['total_articles'] += 1
+        if options.database == "PUBMED":
+            source = "abstract"
+        else:
+            source = "fulltext"
+        article.extract_sentences(source=source)
+        # Annotate sentences
+        for sentence in article.sentences:
+            stats['total_sentences'] += 1
+            try:
+                sentence.annotate()
+            except ValueError:
+                continue
+            sentence.get_candidates(options.exclude)
+            # Predict candidate interactions
+            for candidate in sentence.candidates:
+                stats['total_candidates'] += 1
+                candidate.predict()
+                if candidate.label is True:
+                    stats['total_interacts'] += 1
+                    # Print simple output if needed
+                    if options.output:
+                        ofh.write(
+                            "%s\t%s\t%s\t%s\t%s\n" %
+                            (article.pmid, candidate.prot1.symbol, candidate.prot2.symbol, candidate.votes, sentence.to_html())
+                        )
+    if options.output:
+        ofh.close()
+    # Make summary here
+    if options.report:
+        summary = report.ReportSummary(query)
+        summary.make_report(options.report)
+    return stats
+
+def main():
+    '''
+    Main function
+    '''
+    start_time = time.time()
+    # OPTIONS
+    options = get_options()
+    try:
+        core.NLP = StanfordCoreNLP(options.ip)
+    except:
+        log.critical("Can't connect to StanfordCoreNLP server at %s", options.ip)
+    if options.verbose:
+        log.basicConfig(format="%(levelname)s: %(message)s", level=log.INFO)
+        log.getLogger("requests").setLevel(log.WARNING)
+        log.getLogger("urllib3").setLevel(log.WARNING)
+        log.info("Program started: %s", str(datetime.now()))
+        log.info("Verbose output.")
+        log.info("Database: %s." % options.database)
+    else:
+        # Show only errors and warnings
+        log.basicConfig(format="%(levelname)s: %(message)s")
+
+    # START THE PROGRAM
+    pmids = read_identifiers(options.pmids)
+    stats = get_ppi(options, start_time, pmids)
+    log.info("Total articles analyzed: %s", stats['total_articles'])
+    log.info("Total sentences analyzed: %s", stats['total_sentences'])
+    log.info("Total candidates found: %s", stats['total_candidates'])
+    log.info("Total interactions retrieved: %s", stats['total_interacts'])
+    log.info("Total time: ~%s seconds", round(time.time() - start_time))
+    log.info("Program finished: %s", str(datetime.now()))
+
+
+if __name__ == "__main__":
+    main()

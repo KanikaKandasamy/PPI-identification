@@ -1,0 +1,347 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/scastlara/ppi@3035a2c94f724f54bbcb327e480aeb6393989ff0/ppi/data/style.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<div id="content">
+<h1>Protein protein interaction identification</h1>
+<h2>Summary</h1>
+<table class="summarytable">
+<tr>
+<td>Articles Analyzed</td>
+<td>73</td>
+</tr>
+<tr>
+<td>Total Sentences</td>
+<td>809</td>
+</tr>
+<tr>
+<td>Proteins found</td>
+<td>448</td>
+</tr>
+<tr>
+<td>Interactions retrieved</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Unique interactions</td>
+<td>17</td>
+</tr>
+</table>
+<hr>
+<h2>Interactions</h2>
+<div class="reptable">
+<table id="inttable">
+<thead>
+<tr>
+<th>Confidence</th>
+<th>Protein (A)</th>
+<th>Protein (B)</th>
+<th>Off.symbol (A)</th>
+<th>Off.symbol (B)</th>
+<th>PMid</th>
+<th>Year</th>
+<th>Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.651</td>
+<td>TGF-β3</td>
+<td>JAM-B</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TGF-Β3&sort=score" target="_blank">TGF-Β3</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=JAM-B&sort=score" target="_blank">JAM-B</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25817991" target="_blank">25817991</a></td>
+<td>2015</td>
+<td>Our results revealed that <span class="prot"> TGF-β3 </span> <span class="verb">suppresses</span> <span class="prot"> JAM-B </span> at post-transcriptional and post-translational levels .</td>
+</tr>
+<tr>
+<td>0.442</td>
+<td>125I-TSP1</td>
+<td>GST/LIMPII</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=125I-TSP1&sort=score" target="_blank">125I-TSP1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=GST/LIMPII&sort=score" target="_blank">GST/LIMPII</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=9478926" target="_blank">9478926</a></td>
+<td>1998</td>
+<td>In solid phase binding assays , purified <span class="prot"> 125I-TSP1 </span> <span class="verb">bound</span> to <span class="verb">immobilized</span> <span class="prot"> GST/LIMPII </span> in a time-dependent and saturable manner .</td>
+</tr>
+<tr>
+<td>0.316</td>
+<td>JAM4</td>
+<td>MAGI-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=JAM4&sort=score" target="_blank">JAM4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MAGI-1&sort=score" target="_blank">MAGI-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12773569" target="_blank">12773569</a></td>
+<td>2003</td>
+<td>Biochemical in vitro studies revealed that <span class="prot"> JAM4 </span> <span class="verb">bound</span> to <span class="prot"> MAGI-1 </span> but not to ZO-1 , whereas JAM1 did not bind to MAGI-1 .</td>
+</tr>
+<tr>
+<td>0.276</td>
+<td>JAM4</td>
+<td>ZO-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=JAM4&sort=score" target="_blank">JAM4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ZO-1&sort=score" target="_blank">ZO-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12773569" target="_blank">12773569</a></td>
+<td>2003</td>
+<td><span class="prot"> JAM4 </span> <span class="verb">was</span> <span class="verb">colocalized</span> with <span class="prot"> ZO-1 </span> in kidney glomeruli and in intestinal epithelial cells .</td>
+</tr>
+<tr>
+<td>0.267</td>
+<td>EGFR</td>
+<td>EGF</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=EGFR&sort=score" target="_blank">EGFR</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=EGF&sort=score" target="_blank">EGF</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=17995934" target="_blank">17995934</a></td>
+<td>2008</td>
+<td>Second , it is demonstrated that expression of the NCAM-180 isoform induces EGFR down-regulation in transfected cells and promotes <span class="prot"> EGFR </span> down-regulation <span class="verb">induced</span> by <span class="prot"> EGF </span> stimulation .</td>
+</tr>
+<tr>
+<td>0.24</td>
+<td>TSP1</td>
+<td>LIMPII</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TSP1&sort=score" target="_blank">TSP1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=LIMPII&sort=score" target="_blank">LIMPII</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=9478926" target="_blank">9478926</a></td>
+<td>1998</td>
+<td>This study defines a <span class="prot"> TSP1 </span> binding site <span class="verb">conserved</span> between <span class="prot"> LIMPII </span> and CD36 and suggests that cell surface LIMPII may function in some circumstances as an adhesion receptor for TSP1 .</td>
+</tr>
+<tr>
+<td>0.24</td>
+<td>PECAM-1</td>
+<td>Galphaq/11</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PECAM-1&sort=score" target="_blank">PECAM-1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=GALPHAQ/11&sort=score" target="_blank">GALPHAQ/11</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=18672896" target="_blank">18672896</a></td>
+<td>2008</td>
+<td>This result also suggests that <span class="prot"> PECAM-1 </span> <span class="verb">does</span> not directly <span class="verb">interact</span> with <span class="prot"> Galphaq/11 </span> .</td>
+</tr>
+<tr>
+<td>0.24</td>
+<td>TGF-β3</td>
+<td>JAM-B</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TGF-Β3&sort=score" target="_blank">TGF-Β3</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=JAM-B&sort=score" target="_blank">JAM-B</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25817991" target="_blank">25817991</a></td>
+<td>2015</td>
+<td>Inhibitor , siRNA knockdown and co-immunoprecipitation have shown that <span class="prot"> TGF-β3 </span> <span class="verb">induces</span> <span class="prot"> JAM-B </span> protein degradation via ubiquitin-proteasome pathway .</td>
+</tr>
+<tr>
+<td>0.181</td>
+<td>PDIP38</td>
+<td>CEACAM1-L</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PDIP38&sort=score" target="_blank">PDIP38</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CEACAM1-L&sort=score" target="_blank">CEACAM1-L</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=17623671" target="_blank">17623671</a></td>
+<td>2007</td>
+<td>In this study , we identify DNA polymerase delta-interacting protein 38 ( <span class="prot"> PDIP38 </span> ) as a novel binding partner for <span class="prot"> CEACAM1-L </span> and CEACAM1-S .</td>
+</tr>
+<tr>
+<td>0.164</td>
+<td>PDIP38</td>
+<td>CEACAM1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PDIP38&sort=score" target="_blank">PDIP38</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CEACAM1&sort=score" target="_blank">CEACAM1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=17623671" target="_blank">17623671</a></td>
+<td>2007</td>
+<td>Together , our data show that PDIP38 can shuttle between the cytoplasmic and the nuclear compartments and that its subcellular localization is regulated by CEACAM1 , implicating that <span class="prot"> PDIP38 </span> may <span class="verb">constitute</span> a novel downstream target of <span class="prot"> CEACAM1 </span> signaling .</td>
+</tr>
+<tr>
+<td>0.151</td>
+<td>CD36</td>
+<td>LIMPII</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CD36&sort=score" target="_blank">CD36</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=LIMPII&sort=score" target="_blank">LIMPII</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=9478926" target="_blank">9478926</a></td>
+<td>1998</td>
+<td>This study defines a TSP1 binding site conserved between LIMPII and <span class="prot"> CD36 </span> and <span class="verb">suggests</span> that cell surface <span class="prot"> LIMPII </span> may function in some circumstances as an adhesion receptor for TSP1 .</td>
+</tr>
+<tr>
+<td>0.138</td>
+<td>ERK1/2</td>
+<td>bradykinin</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ERK1/2&sort=score" target="_blank">ERK1/2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=BRADYKININ&sort=score" target="_blank">BRADYKININ</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=18672896" target="_blank">18672896</a></td>
+<td>2008</td>
+<td>Activation of <span class="prot"> ERK1/2 </span> by <span class="prot"> bradykinin </span> in HUVEC is enhanced when PECAM-1 expression is inhibited by transfection of small interference RNA against PECAM-1 .</td>
+</tr>
+<tr>
+<td>0.138</td>
+<td>bradykinin</td>
+<td>PECAM-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=BRADYKININ&sort=score" target="_blank">BRADYKININ</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PECAM-1&sort=score" target="_blank">PECAM-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=18672896" target="_blank">18672896</a></td>
+<td>2008</td>
+<td>Activation of ERK1/2 by <span class="prot"> bradykinin </span> in HUVEC <span class="verb">is</span> <span class="verb">enhanced</span> when <span class="prot"> PECAM-1 </span> expression is inhibited by transfection of small interference RNA against PECAM-1 .</td>
+</tr>
+<tr>
+<td>0.107</td>
+<td>JAM1</td>
+<td>MAGI-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=JAM1&sort=score" target="_blank">JAM1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MAGI-1&sort=score" target="_blank">MAGI-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12773569" target="_blank">12773569</a></td>
+<td>2003</td>
+<td>Biochemical in vitro studies revealed that JAM4 bound to MAGI-1 but not to ZO-1 , whereas <span class="prot"> JAM1 </span> <span class="verb">did</span> not <span class="verb">bind</span> to <span class="prot"> MAGI-1 </span> .</td>
+</tr>
+<tr>
+<td>0.093</td>
+<td>cofilin</td>
+<td>L1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=COFILIN&sort=score" target="_blank">COFILIN</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=L1&sort=score" target="_blank">L1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22019611" target="_blank">22019611</a></td>
+<td>2012</td>
+<td>As L1 is expressed by invasive tumor cells , <span class="prot"> cofilin </span> might also <span class="verb">be</span> a downstream actor of <span class="prot"> L1 </span> in metastasis .</td>
+</tr>
+<tr>
+<td>0.089</td>
+<td>rituximab</td>
+<td>IgG1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=RITUXIMAB&sort=score" target="_blank">RITUXIMAB</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=IGG1&sort=score" target="_blank">IGG1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29132070" target="_blank">29132070</a></td>
+<td>2018</td>
+<td>Recently , <span class="prot"> rituximab </span> , a chimeric <span class="prot"> IgG1 </span> monoclonal antibody which targets the CD20 molecules have been regarded as a promising treatment for PV .</td>
+</tr>
+<tr>
+<td>0.08</td>
+<td>TSP1 recognition motif</td>
+<td>CD36</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TSP1 RECOGNITION MOTIF&sort=score" target="_blank">TSP1 RECOGNITION MOTIF</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CD36&sort=score" target="_blank">CD36</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=9478926" target="_blank">9478926</a></td>
+<td>1998</td>
+<td>Computer-assisted homology searches suggest that the <span class="prot"> TSP1 recognition motif </span> <span class="verb">identified</span> from study of <span class="prot"> CD36 </span> family members may be widely expressed in nature .</td>
+</tr>
+<tr>
+<td>0.076</td>
+<td>JAM4</td>
+<td>ZO-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=JAM4&sort=score" target="_blank">JAM4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ZO-1&sort=score" target="_blank">ZO-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12773569" target="_blank">12773569</a></td>
+<td>2003</td>
+<td>Biochemical in vitro studies revealed that <span class="prot"> JAM4 </span> <span class="verb">bound</span> to MAGI-1 but not to <span class="prot"> ZO-1 </span> , whereas JAM1 did not bind to MAGI-1 .</td>
+</tr>
+<tr>
+<td>0.062</td>
+<td>JAM4</td>
+<td>MAGI-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=JAM4&sort=score" target="_blank">JAM4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MAGI-1&sort=score" target="_blank">MAGI-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12773569" target="_blank">12773569</a></td>
+<td>2003</td>
+<td>These findings suggest that <span class="prot"> JAM4 </span> together with <span class="prot"> MAGI-1 </span> provides an adhesion machinery at tight junctions , which may regulate the permeability of kidney glomerulus and small intestinal epithelial cells .</td>
+</tr>
+<tr>
+<td>0.009</td>
+<td>ERK1/2</td>
+<td>PECAM-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ERK1/2&sort=score" target="_blank">ERK1/2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PECAM-1&sort=score" target="_blank">PECAM-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=18672896" target="_blank">18672896</a></td>
+<td>2008</td>
+<td>Activation of <span class="prot"> ERK1/2 </span> by bradykinin in HUVEC <span class="verb">is</span> <span class="verb">enhanced</span> when <span class="prot"> PECAM-1 </span> expression is inhibited by transfection of small interference RNA against PECAM-1 .</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/scastlara/ppi@51b2e7885ca0553adced1d5d362c6f0315ac12d9/ppi/data/cytoscape_template.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+                    <script>
+                        graphelements = {
+nodes: [
+{ data: { id: 'TGF-Β3', name: 'TGF-Β3', colorNODE: '#4b849d' } },
+{ data: { id: 'JAM-B', name: 'JAM-B', colorNODE: '#4b849d' } },
+{ data: { id: '125I-TSP1', name: '125I-TSP1', colorNODE: '#4b849d' } },
+{ data: { id: 'GST/LIMPII', name: 'GST/LIMPII', colorNODE: '#4b849d' } },
+{ data: { id: 'JAM4', name: 'JAM4', colorNODE: '#4b849d' } },
+{ data: { id: 'MAGI-1', name: 'MAGI-1', colorNODE: '#4b849d' } },
+{ data: { id: 'JAM4', name: 'JAM4', colorNODE: '#4b849d' } },
+{ data: { id: 'ZO-1', name: 'ZO-1', colorNODE: '#4b849d' } },
+{ data: { id: 'EGFR', name: 'EGFR', colorNODE: '#4b849d' } },
+{ data: { id: 'EGF', name: 'EGF', colorNODE: '#4b849d' } },
+{ data: { id: 'TSP1', name: 'TSP1', colorNODE: '#4b849d' } },
+{ data: { id: 'LIMPII', name: 'LIMPII', colorNODE: '#4b849d' } },
+{ data: { id: 'PECAM-1', name: 'PECAM-1', colorNODE: '#4b849d' } },
+{ data: { id: 'GALPHAQ/11', name: 'GALPHAQ/11', colorNODE: '#4b849d' } },
+{ data: { id: 'TGF-Β3', name: 'TGF-Β3', colorNODE: '#4b849d' } },
+{ data: { id: 'JAM-B', name: 'JAM-B', colorNODE: '#4b849d' } },
+{ data: { id: 'PDIP38', name: 'PDIP38', colorNODE: '#4b849d' } },
+{ data: { id: 'CEACAM1-L', name: 'CEACAM1-L', colorNODE: '#4b849d' } },
+{ data: { id: 'PDIP38', name: 'PDIP38', colorNODE: '#4b849d' } },
+{ data: { id: 'CEACAM1', name: 'CEACAM1', colorNODE: '#4b849d' } },
+{ data: { id: 'CD36', name: 'CD36', colorNODE: '#4b849d' } },
+{ data: { id: 'LIMPII', name: 'LIMPII', colorNODE: '#4b849d' } },
+{ data: { id: 'ERK1/2', name: 'ERK1/2', colorNODE: '#4b849d' } },
+{ data: { id: 'BRADYKININ', name: 'BRADYKININ', colorNODE: '#4b849d' } },
+{ data: { id: 'BRADYKININ', name: 'BRADYKININ', colorNODE: '#4b849d' } },
+{ data: { id: 'PECAM-1', name: 'PECAM-1', colorNODE: '#4b849d' } },
+{ data: { id: 'JAM1', name: 'JAM1', colorNODE: '#4b849d' } },
+{ data: { id: 'MAGI-1', name: 'MAGI-1', colorNODE: '#4b849d' } },
+{ data: { id: 'COFILIN', name: 'COFILIN', colorNODE: '#4b849d' } },
+{ data: { id: 'L1', name: 'L1', colorNODE: '#4b849d' } },
+{ data: { id: 'RITUXIMAB', name: 'RITUXIMAB', colorNODE: '#4b849d' } },
+{ data: { id: 'IGG1', name: 'IGG1', colorNODE: '#4b849d' } },
+{ data: { id: 'TSP1 RECOGNITION MOTIF', name: 'TSP1 RECOGNITION MOTIF', colorNODE: '#4b849d' } },
+{ data: { id: 'CD36', name: 'CD36', colorNODE: '#4b849d' } },
+{ data: { id: 'JAM4', name: 'JAM4', colorNODE: '#4b849d' } },
+{ data: { id: 'ZO-1', name: 'ZO-1', colorNODE: '#4b849d' } },
+{ data: { id: 'JAM4', name: 'JAM4', colorNODE: '#4b849d' } },
+{ data: { id: 'MAGI-1', name: 'MAGI-1', colorNODE: '#4b849d' } },
+{ data: { id: 'ERK1/2', name: 'ERK1/2', colorNODE: '#4b849d' } },
+{ data: { id: 'PECAM-1', name: 'PECAM-1', colorNODE: '#4b849d' } },
+], edges: [
+{ data: { id: 'TGF-Β3-JAM-B', source: 'TGF-Β3', target: 'JAM-B', confidence:'0.351', colorEDGE: '#cdbb44' }},
+{ data: { id: '125I-TSP1-GST/LIMPII', source: '125I-TSP1', target: 'GST/LIMPII', confidence:'0.342', colorEDGE: '#cdbb44' }},
+{ data: { id: 'JAM4-MAGI-1', source: 'JAM4', target: 'MAGI-1', confidence:'0.316', colorEDGE: '#cdbb44' }},
+{ data: { id: 'JAM4-ZO-1', source: 'JAM4', target: 'ZO-1', confidence:'0.276', colorEDGE: '#cdbb44' }},
+{ data: { id: 'EGFR-EGF', source: 'EGFR', target: 'EGF', confidence:'0.267', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TSP1-LIMPII', source: 'TSP1', target: 'LIMPII', confidence:'0.24', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PECAM-1-GALPHAQ/11', source: 'PECAM-1', target: 'GALPHAQ/11', confidence:'0.24', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TGF-Β3-JAM-B', source: 'TGF-Β3', target: 'JAM-B', confidence:'0.24', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PDIP38-CEACAM1-L', source: 'PDIP38', target: 'CEACAM1-L', confidence:'0.181', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PDIP38-CEACAM1', source: 'PDIP38', target: 'CEACAM1', confidence:'0.164', colorEDGE: '#cdbb44' }},
+{ data: { id: 'CD36-LIMPII', source: 'CD36', target: 'LIMPII', confidence:'0.151', colorEDGE: '#cdbb44' }},
+{ data: { id: 'ERK1/2-BRADYKININ', source: 'ERK1/2', target: 'BRADYKININ', confidence:'0.138', colorEDGE: '#cdbb44' }},
+{ data: { id: 'BRADYKININ-PECAM-1', source: 'BRADYKININ', target: 'PECAM-1', confidence:'0.138', colorEDGE: '#cdbb44' }},
+{ data: { id: 'JAM1-MAGI-1', source: 'JAM1', target: 'MAGI-1', confidence:'0.107', colorEDGE: '#cdbb44' }},
+{ data: { id: 'COFILIN-L1', source: 'COFILIN', target: 'L1', confidence:'0.093', colorEDGE: '#cdbb44' }},
+{ data: { id: 'RITUXIMAB-IGG1', source: 'RITUXIMAB', target: 'IGG1', confidence:'0.089', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TSP1 RECOGNITION MOTIF-CD36', source: 'TSP1 RECOGNITION MOTIF', target: 'CD36', confidence:'0.08', colorEDGE: '#cdbb44' }},
+{ data: { id: 'JAM4-ZO-1', source: 'JAM4', target: 'ZO-1', confidence:'0.076', colorEDGE: '#cdbb44' }},
+{ data: { id: 'JAM4-MAGI-1', source: 'JAM4', target: 'MAGI-1', confidence:'0.062', colorEDGE: '#cdbb44' }},
+{ data: { id: 'ERK1/2-PECAM-1', source: 'ERK1/2', target: 'PECAM-1', confidence:'0.009', colorEDGE: '#cdbb44' }},
+]
+
+};
+                        cy.load(graphelements);
+                        cy.layout( { name: 'cose' } );
+                    </script>
+                    <script>
+                    $(document).ready(function(){
+                        $('#inttable').DataTable({
+                            "order": [[ 0, "desc" ]]
+                        });
+                        $('#prottable').DataTable({
+                            "order": [[ 1, "desc" ]]
+                        });
+                    });
+                    </script>
+                    
+</body>
+<html>

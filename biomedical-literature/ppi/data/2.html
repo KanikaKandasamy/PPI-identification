@@ -1,0 +1,738 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/scastlara/ppi@3035a2c94f724f54bbcb327e480aeb6393989ff0/ppi/data/style.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<div id="content">
+<h1>Protein protein interaction identification</h1>
+<hr>
+<h2>Summary</h1>
+<table class="summarytable">
+<tr>
+<td>Articles Analyzed</td>
+<td>93</td>
+</tr>
+<tr>
+<td>Total Sentences</td>
+<td>906</td>
+</tr>
+<tr>
+<td>Proteins found</td>
+<td>531</td>
+</tr>
+<tr>
+<td>Interactions retrieved</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Unique interactions</td>
+<td>49</td>
+</tr>
+</table>
+<hr>
+<h2>Interactions</h2>
+<div class="reptable">
+<table id="inttable">
+<thead>
+<tr>
+<th>Confidence</th>
+<th>Protein (A)</th>
+<th>Protein (B)</th>
+<th>Off.symbol (A)</th>
+<th>Off.symbol (B)</th>
+<th>PMid</th>
+<th>Year</th>
+<th>Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.901</td>
+<td>Bach1</td>
+<td>TCF4</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=BACH1&sort=score" target="_blank">BACH1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TCF4&sort=score" target="_blank">TCF4</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26123998" target="_blank">26123998</a></td>
+<td>2015</td>
+<td>Immunoprecipitation and GST pull-down assessments indicated that <span class="prot"> Bach1 </span> <span class="verb">binds</span> directly to <span class="prot"> TCF4 </span> and reduces the interaction of β-catenin with TCF4 .</td>
+</tr>
+<tr>
+<td>0.787</td>
+<td>MRG-1</td>
+<td>euchromatin</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MRG-1&sort=score" target="_blank">MRG-1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=EUCHROMATIN&sort=score" target="_blank">EUCHROMATIN</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31118512" target="_blank">31118512</a></td>
+<td>2020</td>
+<td>However , <span class="prot"> MRG-1 </span> <span class="verb">is</span> exclusively <span class="verb">bound</span> to <span class="prot"> euchromatin </span> , suggesting that it acts indirectly .</td>
+</tr>
+<tr>
+<td>0.562</td>
+<td>PKN2</td>
+<td>Erk1/2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PKN2&sort=score" target="_blank">PKN2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ERK1/2&sort=score" target="_blank">ERK1/2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29368606" target="_blank">29368606</a></td>
+<td>2018</td>
+<td>DUSP6 , which is phosphorylated and activated through direct association with <span class="prot"> PKN2 </span> , <span class="verb">suppresses</span> <span class="prot"> Erk1/2 </span> activation .</td>
+</tr>
+<tr>
+<td>0.464</td>
+<td>Polι</td>
+<td>PCNA</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=POLΙ&sort=score" target="_blank">POLΙ</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PCNA&sort=score" target="_blank">PCNA</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886224" target="_blank">30886224</a></td>
+<td>2020</td>
+<td>Like all other Y-family polymerases , <span class="prot"> Polι </span> <span class="verb">interacts</span> with <span class="verb">proliferating</span> cell nuclear antigen ( <span class="prot"> PCNA </span> ) , Rev1 , ubiquitin and ubiquitinated-PCNA and is also ubiquitinated itself .</td>
+</tr>
+<tr>
+<td>0.307</td>
+<td>FXIII-A</td>
+<td>Fcgamma</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=FXIII-A&sort=score" target="_blank">FXIII-A</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=FCGAMMA&sort=score" target="_blank">FCGAMMA</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15219459" target="_blank">15219459</a></td>
+<td>2004</td>
+<td>Our results suggest that <span class="prot"> FXIII-A </span> <span class="verb">plays</span> a role in the <span class="prot"> Fcgamma </span> and complement receptor-mediated phagocytic activities of monocytes/macrophages .</td>
+</tr>
+<tr>
+<td>0.28</td>
+<td>TDP43</td>
+<td>ATE1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TDP43&sort=score" target="_blank">TDP43</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ATE1&sort=score" target="_blank">ATE1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29987190" target="_blank">29987190</a></td>
+<td>2019</td>
+<td>We found that TDP43 is degraded primarily by the Arg/N-end rule pathway , whereas degradation of <span class="prot"> TDP43 </span> <span class="verb">continues</span> in the absence of <span class="prot"> ATE1 </span> .</td>
+</tr>
+<tr>
+<td>0.276</td>
+<td>transamidase</td>
+<td>TG2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TRANSAMIDASE&sort=score" target="_blank">TRANSAMIDASE</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TG2&sort=score" target="_blank">TG2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31991788" target="_blank">31991788</a></td>
+<td>2020</td>
+<td>The enzymatic analysis of the mutants revealed that Ca binding to these sites is required for the <span class="prot"> transamidase </span> activity of <span class="prot"> TG2 </span> .</td>
+</tr>
+<tr>
+<td>0.276</td>
+<td>Kes1</td>
+<td>NuA4</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=KES1&sort=score" target="_blank">KES1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=NUA4&sort=score" target="_blank">NUA4</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29396115" target="_blank">29396115</a></td>
+<td>2018</td>
+<td>Moreover , the data identify <span class="prot"> Kes1 </span> as a non-histone target for <span class="prot"> NuA4 </span> through which this lysine acetyltransferase co-modulates membrane-trafficking and cell-cycle activities .</td>
+</tr>
+<tr>
+<td>0.271</td>
+<td>Dyrk3</td>
+<td>NCOA3</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=DYRK3&sort=score" target="_blank">DYRK3</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=NCOA3&sort=score" target="_blank">NCOA3</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31066068" target="_blank">31066068</a></td>
+<td>2020</td>
+<td>Mechanistically , <span class="prot"> Dyrk3 </span> directly <span class="verb">phosphorylated</span> <span class="prot"> NCOA3 </span> at Ser-1330 , disrupting its binding to ATF4 and thereby causing the inhibition of ATF4 transcriptional activity .</td>
+</tr>
+<tr>
+<td>0.253</td>
+<td>Sad7</td>
+<td>avenacin</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SAD7&sort=score" target="_blank">SAD7</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=AVENACIN&sort=score" target="_blank">AVENACIN</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=19684243" target="_blank">19684243</a></td>
+<td>2009</td>
+<td><span class="prot"> Sad7 </span> forms part of an operon-like gene cluster for <span class="prot"> avenacin </span> synthesis .</td>
+</tr>
+<tr>
+<td>0.227</td>
+<td>H3K27ac</td>
+<td>mrg-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=H3K27AC&sort=score" target="_blank">H3K27AC</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MRG-1&sort=score" target="_blank">MRG-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31118512" target="_blank">31118512</a></td>
+<td>2020</td>
+<td>CBP-1 and <span class="prot"> H3K27ac </span> levels <span class="verb">increase</span> in heterochromatin upon <span class="prot"> mrg-1 </span> knockdown , coincident with delocalization .</td>
+</tr>
+<tr>
+<td>0.222</td>
+<td>telomerase</td>
+<td>hTERT</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TELOMERASE&sort=score" target="_blank">TELOMERASE</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HTERT&sort=score" target="_blank">HTERT</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16170363" target="_blank">16170363</a></td>
+<td>2006</td>
+<td>Basal <span class="prot"> telomerase </span> activity <span class="verb">is</span> dependent on expression of the <span class="prot"> hTERT </span> and hTR genes and upregulation of telomerase gene expression is associated with tumour development .</td>
+</tr>
+<tr>
+<td>0.222</td>
+<td>Dyrk3</td>
+<td>ATF4</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=DYRK3&sort=score" target="_blank">DYRK3</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ATF4&sort=score" target="_blank">ATF4</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31066068" target="_blank">31066068</a></td>
+<td>2020</td>
+<td>Importantly , levels of <span class="prot"> Dyrk3 </span> and phospho-NCOA3-S1330 inversely <span class="verb">correlate</span> with the expression of <span class="prot"> ATF4 </span> in human HCC specimens .</td>
+</tr>
+<tr>
+<td>0.2</td>
+<td>ATM</td>
+<td>UFL1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ATM&sort=score" target="_blank">ATM</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UFL1&sort=score" target="_blank">UFL1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886146" target="_blank">30886146</a></td>
+<td>2019</td>
+<td>Furthermore , <span class="prot"> ATM </span> <span class="verb">phosphorylates</span> <span class="prot"> UFL1 </span> at serine 462 , enhancing UFL1 E3 ligase activity and promoting ATM activation in a positive feedback loop .</td>
+</tr>
+<tr>
+<td>0.2</td>
+<td>histone H4</td>
+<td>UFL1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HISTONE H4&sort=score" target="_blank">HISTONE H4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UFL1&sort=score" target="_blank">UFL1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886146" target="_blank">30886146</a></td>
+<td>2019</td>
+<td>These findings reveal that ufmylation of <span class="prot"> histone H4 </span> by <span class="prot"> UFL1 </span> is an important step for amplification of ATM activation and maintenance of genomic integrity .</td>
+</tr>
+<tr>
+<td>0.182</td>
+<td>histone targets</td>
+<td>BRD9</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HISTONE TARGETS&sort=score" target="_blank">HISTONE TARGETS</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=BRD9&sort=score" target="_blank">BRD9</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28500727" target="_blank">28500727</a></td>
+<td>2017</td>
+<td>Similarly , there is little known about the <span class="prot"> histone targets </span> of the <span class="prot"> BRD9 </span> and ATAD2b bromodomain proteins .</td>
+</tr>
+<tr>
+<td>0.182</td>
+<td>FEN1</td>
+<td>p300</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=FEN1&sort=score" target="_blank">FEN1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=P300&sort=score" target="_blank">P300</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=20019387" target="_blank">20019387</a></td>
+<td>2010</td>
+<td>Acetylation of <span class="prot"> FEN1 </span> by <span class="prot"> p300 </span> inhibits its endonuclease activity , impairing flap cleavage , a seemingly undesirable effect .</td>
+</tr>
+<tr>
+<td>0.164</td>
+<td>Polι</td>
+<td>proliferating cell nuclear antigen</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=POLΙ&sort=score" target="_blank">POLΙ</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PROLIFERATING CELL NUCLEAR ANTIGEN&sort=score" target="_blank">PROLIFERATING CELL NUCLEAR ANTIGEN</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886224" target="_blank">30886224</a></td>
+<td>2020</td>
+<td>Like all other Y-family polymerases , <span class="prot"> Polι </span> <span class="verb">interacts</span> with <span class="prot"> proliferating cell nuclear antigen </span> ( PCNA ) , Rev1 , ubiquitin and ubiquitinated-PCNA and is also ubiquitinated itself .</td>
+</tr>
+<tr>
+<td>0.156</td>
+<td>UFL1</td>
+<td>ATM</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UFL1&sort=score" target="_blank">UFL1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ATM&sort=score" target="_blank">ATM</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886146" target="_blank">30886146</a></td>
+<td>2019</td>
+<td>These findings reveal that ufmylation of histone H4 by <span class="prot"> UFL1 </span> <span class="verb">is</span> an important step for amplification of <span class="prot"> ATM </span> activation and maintenance of genomic integrity .</td>
+</tr>
+<tr>
+<td>0.147</td>
+<td>MORC2</td>
+<td>NAT10</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MORC2&sort=score" target="_blank">MORC2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=NAT10&sort=score" target="_blank">NAT10</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=32112098" target="_blank">32112098</a></td>
+<td>2020</td>
+<td>Moreover , <span class="prot"> MORC2 </span> acetylation levels <span class="verb">are</span> <span class="verb">associated</span> with elevated <span class="prot"> NAT10 </span> expression in clinical breast tumor samples .</td>
+</tr>
+<tr>
+<td>0.147</td>
+<td>Polι</td>
+<td>Rev1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=POLΙ&sort=score" target="_blank">POLΙ</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=REV1&sort=score" target="_blank">REV1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886224" target="_blank">30886224</a></td>
+<td>2020</td>
+<td>Like all other Y-family polymerases , <span class="prot"> Polι </span> <span class="verb">interacts</span> with <span class="verb">proliferating</span> cell nuclear antigen ( PCNA ) , <span class="prot"> Rev1 </span> , ubiquitin and ubiquitinated-PCNA and is also ubiquitinated itself .</td>
+</tr>
+<tr>
+<td>0.133</td>
+<td>MORC2</td>
+<td>histone H3</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MORC2&sort=score" target="_blank">MORC2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HISTONE H3&sort=score" target="_blank">HISTONE H3</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=32112098" target="_blank">32112098</a></td>
+<td>2020</td>
+<td>Notably , acetylated <span class="prot"> MORC2 </span> <span class="verb">binds</span> to <span class="prot"> histone H3 </span> phosphorylation at threonine 11 ( H3T11P ) and is essential for DNA damage-induced reduction of H3T11P and transcriptional repression of its downstream target genes CDK1 and Cyclin B1 , thus contributing to DNA damage-induced G2 checkpoint activation .</td>
+</tr>
+<tr>
+<td>0.133</td>
+<td>Polι</td>
+<td>p300 acetyltransferase</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=POLΙ&sort=score" target="_blank">POLΙ</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=P300 ACETYLTRANSFERASE&sort=score" target="_blank">P300 ACETYLTRANSFERASE</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886224" target="_blank">30886224</a></td>
+<td>2020</td>
+<td>Here , we report that <span class="prot"> Polι </span> also <span class="verb">interacts</span> with the <span class="prot"> p300 acetyltransferase </span> and is acetylated .</td>
+</tr>
+<tr>
+<td>0.124</td>
+<td>Tyr18</td>
+<td>ZDHHC3</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TYR18&sort=score" target="_blank">TYR18</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ZDHHC3&sort=score" target="_blank">ZDHHC3</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27247265" target="_blank">27247265</a></td>
+<td>2017</td>
+<td>By site-directed mutagenesis , we found that <span class="prot"> Tyr18 </span> <span class="verb">is</span> an FGFR1-specific <span class="prot"> ZDHHC3 </span> phosphorylation site , while Tyr295 and Tyr297 are specifically phosphorylated by Src kinase in cell-based and cell-free assays .</td>
+</tr>
+<tr>
+<td>0.124</td>
+<td>PFKFB4</td>
+<td>SRC-3</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PFKFB4&sort=score" target="_blank">PFKFB4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SRC-3&sort=score" target="_blank">SRC-3</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29615789" target="_blank">29615789</a></td>
+<td>2018</td>
+<td><span class="prot"> PFKFB4 </span> <span class="verb">phosphorylates</span> <span class="prot"> SRC-3 </span> at serine 857 and enhances its transcriptional activity , whereas either suppression of PFKFB4 or ectopic expression of a phosphorylation-deficient Ser857Ala mutant SRC-3 abolishes the SRC-3-mediated transcriptional output .</td>
+</tr>
+<tr>
+<td>0.12</td>
+<td>EndoMT</td>
+<td>Cpt2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ENDOMT&sort=score" target="_blank">ENDOMT</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CPT2&sort=score" target="_blank">CPT2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29429925" target="_blank">29429925</a></td>
+<td>2019</td>
+<td>Consistent with the known pathological effects of <span class="prot"> EndoMT </span> , adult <span class="prot"> Cpt2 </span> mice demonstrate increased permeability in multiple vascular beds .</td>
+</tr>
+<tr>
+<td>0.12</td>
+<td>β-catenin</td>
+<td>cadherin protein</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=Β-CATENIN&sort=score" target="_blank">Β-CATENIN</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CADHERIN PROTEIN&sort=score" target="_blank">CADHERIN PROTEIN</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28476164" target="_blank">28476164</a></td>
+<td>2018</td>
+<td><span class="prot"> β-catenin </span> <span class="verb">is</span> a core component of the <span class="prot"> cadherin protein </span> complex , whose stabilization is essential for the activation of Wnt / β-catenin signaling .</td>
+</tr>
+<tr>
+<td>0.111</td>
+<td>M mAChR</td>
+<td>nAChR</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=M MACHR&sort=score" target="_blank">M MACHR</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=NACHR&sort=score" target="_blank">NACHR</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28552584" target="_blank">28552584</a></td>
+<td>2017</td>
+<td>Immune cells express all five M - <span class="prot"> M mAChR </span> subtypes and several <span class="prot"> nAChR </span> subtypes , including α7 .</td>
+</tr>
+<tr>
+<td>0.102</td>
+<td>Bach1</td>
+<td>interleukin-8</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=BACH1&sort=score" target="_blank">BACH1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=INTERLEUKIN-8&sort=score" target="_blank">INTERLEUKIN-8</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26123998" target="_blank">26123998</a></td>
+<td>2015</td>
+<td>Bach1 overexpression reduces the interaction between p300/CBP and β-catenin , as well as β-catenin acetylation , and chromatin immunoprecipitation experiments confirmed that <span class="prot"> Bach1 </span> <span class="verb">occupies</span> the TCF4-binding site of the <span class="prot"> interleukin-8 </span> promoter and recruits histone deacetylase 1 to the interleukin-8 promoter in human umbilical vein ECs .</td>
+</tr>
+<tr>
+<td>0.098</td>
+<td>SH3 domain</td>
+<td>GRB2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SH3 DOMAIN&sort=score" target="_blank">SH3 DOMAIN</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=GRB2&sort=score" target="_blank">GRB2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31462771" target="_blank">31462771</a></td>
+<td>2020</td>
+<td>Cytokine stimulation increases STAT3 palmitoylation by promoting the association between ZDHHC19 and STAT3 , which is mediated by the <span class="prot"> SH3 domain </span> of <span class="prot"> GRB2 </span> .</td>
+</tr>
+<tr>
+<td>0.096</td>
+<td>STAT3</td>
+<td>SH2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=STAT3&sort=score" target="_blank">STAT3</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SH2&sort=score" target="_blank">SH2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31462771" target="_blank">31462771</a></td>
+<td>2020</td>
+<td>Here we show that <span class="prot"> STAT3 </span> <span class="verb">is</span> post-translationally <span class="verb">S-palmitoylated</span> at the SRC homology 2 ( <span class="prot"> SH2 </span> ) domain , which promotes the dimerization and transcriptional activation of STAT3 .</td>
+</tr>
+<tr>
+<td>0.093</td>
+<td>Y-family polymerases</td>
+<td>PCNA</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=Y-FAMILY POLYMERASES&sort=score" target="_blank">Y-FAMILY POLYMERASES</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PCNA&sort=score" target="_blank">PCNA</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886224" target="_blank">30886224</a></td>
+<td>2020</td>
+<td>Like all other <span class="prot"> Y-family polymerases </span> , Polι <span class="verb">interacts</span> with <span class="verb">proliferating</span> cell nuclear antigen ( <span class="prot"> PCNA </span> ) , Rev1 , ubiquitin and ubiquitinated-PCNA and is also ubiquitinated itself .</td>
+</tr>
+<tr>
+<td>0.093</td>
+<td>Wnt</td>
+<td>β-catenin</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=WNT&sort=score" target="_blank">WNT</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=Β-CATENIN&sort=score" target="_blank">Β-CATENIN</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28476164" target="_blank">28476164</a></td>
+<td>2018</td>
+<td>β-catenin is a core component of the cadherin protein complex , whose stabilization is essential for the activation of <span class="prot"> Wnt </span> / <span class="prot"> β-catenin </span> signaling .</td>
+</tr>
+<tr>
+<td>0.076</td>
+<td>p65</td>
+<td>ACAT-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=P65&sort=score" target="_blank">P65</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ACAT-1&sort=score" target="_blank">ACAT-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27004848" target="_blank">27004848</a></td>
+<td>2017</td>
+<td>Salusin-β caused p65-NFκB nuclear translocation and increased <span class="prot"> p65 </span> occupancy at the <span class="prot"> ACAT-1 </span> and VCAM-1 promoter .</td>
+</tr>
+<tr>
+<td>0.076</td>
+<td>PKN2</td>
+<td>IL4</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PKN2&sort=score" target="_blank">PKN2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=IL4&sort=score" target="_blank">IL4</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29368606" target="_blank">29368606</a></td>
+<td>2018</td>
+<td>Mechanistically , <span class="prot"> PKN2 </span> <span class="verb">suppresses</span> the expression of <span class="prot"> IL4 </span> and IL10 from colon cancer cells by inhibiting Erk1/2 phosphorylation , which is required for phosphorylation and binding of CREB and Elk-1 to the promoters of IL4 and IL10 .</td>
+</tr>
+<tr>
+<td>0.076</td>
+<td>p300</td>
+<td>Dna2</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=P300&sort=score" target="_blank">P300</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=DNA2&sort=score" target="_blank">DNA2</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=20019387" target="_blank">20019387</a></td>
+<td>2010</td>
+<td>We now show that <span class="prot"> p300 </span> also <span class="verb">acetylates</span> <span class="prot"> Dna2 </span> , stimulating its 5 ' -3 ' endonuclease , the 5 ' -3 ' helicase , and DNA-dependent ATPase activities .</td>
+</tr>
+<tr>
+<td>0.076</td>
+<td>CBP-1</td>
+<td>mrg-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CBP-1&sort=score" target="_blank">CBP-1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MRG-1&sort=score" target="_blank">MRG-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31118512" target="_blank">31118512</a></td>
+<td>2020</td>
+<td><span class="prot"> CBP-1 </span> and H3K27ac levels <span class="verb">increase</span> in heterochromatin upon <span class="prot"> mrg-1 </span> knockdown , coincident with delocalization .</td>
+</tr>
+<tr>
+<td>0.067</td>
+<td>MORC2 K767Ac</td>
+<td>NAT10</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MORC2 K767AC&sort=score" target="_blank">MORC2 K767AC</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=NAT10&sort=score" target="_blank">NAT10</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=32112098" target="_blank">32112098</a></td>
+<td>2020</td>
+<td>DNA-damaging chemotherapeutic agents and ionizing radiation stimulate <span class="prot"> MORC2 K767Ac </span> through <span class="verb">enhancing</span> the interaction between MORC2 and <span class="prot"> NAT10 </span> .</td>
+</tr>
+<tr>
+<td>0.058</td>
+<td>ACOT</td>
+<td>ATPase</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ACOT&sort=score" target="_blank">ACOT</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ATPASE&sort=score" target="_blank">ATPASE</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31324846" target="_blank">31324846</a></td>
+<td>2020</td>
+<td>Thus , <span class="prot"> ACOT </span> activity <span class="verb">depends</span> on functional <span class="prot"> ATPase </span> activity but not vice versa , and these two activities can be separated by mutagenesis .</td>
+</tr>
+<tr>
+<td>0.058</td>
+<td>Polι</td>
+<td>ubiquitin</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=POLΙ&sort=score" target="_blank">POLΙ</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=UBIQUITIN&sort=score" target="_blank">UBIQUITIN</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886224" target="_blank">30886224</a></td>
+<td>2020</td>
+<td>Like all other Y-family polymerases , <span class="prot"> Polι </span> <span class="verb">interacts</span> with <span class="verb">proliferating</span> cell nuclear antigen ( PCNA ) , Rev1 , <span class="prot"> ubiquitin </span> and ubiquitinated-PCNA and is also ubiquitinated itself .</td>
+</tr>
+<tr>
+<td>0.053</td>
+<td>histone H4</td>
+<td>Tip60</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HISTONE H4&sort=score" target="_blank">HISTONE H4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TIP60&sort=score" target="_blank">TIP60</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30886146" target="_blank">30886146</a></td>
+<td>2019</td>
+<td>Monoufmylated <span class="prot"> histone H4 </span> <span class="verb">is</span> important for Suv39h1 and <span class="prot"> Tip60 </span> recruitment .</td>
+</tr>
+<tr>
+<td>0.044</td>
+<td>β-catenin</td>
+<td>TCF4</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=Β-CATENIN&sort=score" target="_blank">Β-CATENIN</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TCF4&sort=score" target="_blank">TCF4</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26123998" target="_blank">26123998</a></td>
+<td>2015</td>
+<td>Immunoprecipitation and GST pull-down assessments indicated that Bach1 binds directly to TCF4 and reduces the interaction of <span class="prot"> β-catenin </span> with <span class="prot"> TCF4 </span> .</td>
+</tr>
+<tr>
+<td>0.044</td>
+<td>PKN2</td>
+<td>IL10</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=PKN2&sort=score" target="_blank">PKN2</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=IL10&sort=score" target="_blank">IL10</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29368606" target="_blank">29368606</a></td>
+<td>2018</td>
+<td>Mechanistically , <span class="prot"> PKN2 </span> <span class="verb">suppresses</span> the expression of IL4 and <span class="prot"> IL10 </span> from colon cancer cells by inhibiting Erk1/2 phosphorylation , which is required for phosphorylation and binding of CREB and Elk-1 to the promoters of IL4 and IL10 .</td>
+</tr>
+<tr>
+<td>0.04</td>
+<td>STAT3</td>
+<td>ZDHHC19</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=STAT3&sort=score" target="_blank">STAT3</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ZDHHC19&sort=score" target="_blank">ZDHHC19</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31462771" target="_blank">31462771</a></td>
+<td>2020</td>
+<td>Cytokine stimulation increases <span class="prot"> STAT3 </span> palmitoylation by <span class="verb">promoting</span> the association between <span class="prot"> ZDHHC19 </span> and STAT3 , which is mediated by the SH3 domain of GRB2 .</td>
+</tr>
+<tr>
+<td>0.04</td>
+<td>myo4</td>
+<td>Ash1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MYO4&sort=score" target="_blank">MYO4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ASH1&sort=score" target="_blank">ASH1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=33010153" target="_blank">33010153</a></td>
+<td>2020</td>
+<td>To understand how Ash1 represses transcription , we used a <span class="prot"> myo4 </span> mutation which <span class="verb">boosts</span> <span class="prot"> Ash1 </span> accumulation in both mothers and daughters and show that Ash1 inhibits promoter recruitment of SWI/SNF and Gcn5 .</td>
+</tr>
+<tr>
+<td>0.027</td>
+<td>ESCO1</td>
+<td>cohesin</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ESCO1&sort=score" target="_blank">ESCO1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=COHESIN&sort=score" target="_blank">COHESIN</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31935221" target="_blank">31935221</a></td>
+<td>2020</td>
+<td>We propose that DDX11 , <span class="prot"> ESCO1 </span> and ESCO2 <span class="verb">control</span> different fractions of <span class="prot"> cohesin </span> that are spatially and mechanistically separated .</td>
+</tr>
+<tr>
+<td>0.027</td>
+<td>cec-4</td>
+<td>MRG-1</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=CEC-4&sort=score" target="_blank">CEC-4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=MRG-1&sort=score" target="_blank">MRG-1</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31118512" target="_blank">31118512</a></td>
+<td>2020</td>
+<td>Here we use an RNA interference screen in the <span class="prot"> cec-4 </span> background and <span class="verb">identify</span> <span class="prot"> MRG-1 </span> as a broadly expressed factor that is necessary for this second chromatin anchor in intestinal cells .</td>
+</tr>
+<tr>
+<td>0.018</td>
+<td>Tra1</td>
+<td>NuA4</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TRA1&sort=score" target="_blank">TRA1</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=NUA4&sort=score" target="_blank">NUA4</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31748520" target="_blank">31748520</a></td>
+<td>2020</td>
+<td>We show that <span class="prot"> Tra1 </span> <span class="verb">contributes</span> to the overall integrity of <span class="prot"> NuA4 </span> , whereas , within SAGA , it specifically controls the incorporation of the de-ubiquitination module ( DUB ) , as part of an ordered assembly pathway .</td>
+</tr>
+<tr>
+<td>0.0</td>
+<td>telomerase</td>
+<td>hTR genes</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=TELOMERASE&sort=score" target="_blank">TELOMERASE</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=HTR GENES&sort=score" target="_blank">HTR GENES</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16170363" target="_blank">16170363</a></td>
+<td>2006</td>
+<td>Basal <span class="prot"> telomerase </span> activity <span class="verb">is</span> dependent on expression of the hTERT and <span class="prot"> hTR genes </span> and upregulation of telomerase gene expression is associated with tumour development .</td>
+</tr>
+<tr>
+<td>0.0</td>
+<td>ATF4</td>
+<td>SRC-3</td>
+<td><a href="http://www.uniprot.org/uniprot/?query=ATF4&sort=score" target="_blank">ATF4</a></td>
+<td><a href="http://www.uniprot.org/uniprot/?query=SRC-3&sort=score" target="_blank">SRC-3</a></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=29615789" target="_blank">29615789</a></td>
+<td>2018</td>
+<td>Mechanistically , phosphorylation of SRC-3 at Ser857 increases its interaction with the transcription factor <span class="prot"> ATF4 </span> by <span class="verb">stabilizing</span> the recruitment of <span class="prot"> SRC-3 </span> and ATF4 to target gene promoters .</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/scastlara/ppi@51b2e7885ca0553adced1d5d362c6f0315ac12d9/ppi/data/cytoscape_template.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+                    <script>
+                        graphelements = {
+nodes: [
+{ data: { id: 'BACH1', name: 'BACH1', colorNODE: '#4b849d' } },
+{ data: { id: 'TCF4', name: 'TCF4', colorNODE: '#4b849d' } },
+{ data: { id: 'MRG-1', name: 'MRG-1', colorNODE: '#4b849d' } },
+{ data: { id: 'EUCHROMATIN', name: 'EUCHROMATIN', colorNODE: '#4b849d' } },
+{ data: { id: 'PKN2', name: 'PKN2', colorNODE: '#4b849d' } },
+{ data: { id: 'ERK1/2', name: 'ERK1/2', colorNODE: '#4b849d' } },
+{ data: { id: 'POLΙ', name: 'POLΙ', colorNODE: '#4b849d' } },
+{ data: { id: 'PCNA', name: 'PCNA', colorNODE: '#4b849d' } },
+{ data: { id: 'FXIII-A', name: 'FXIII-A', colorNODE: '#4b849d' } },
+{ data: { id: 'FCGAMMA', name: 'FCGAMMA', colorNODE: '#4b849d' } },
+{ data: { id: 'TDP43', name: 'TDP43', colorNODE: '#4b849d' } },
+{ data: { id: 'ATE1', name: 'ATE1', colorNODE: '#4b849d' } },
+{ data: { id: 'TRANSAMIDASE', name: 'TRANSAMIDASE', colorNODE: '#4b849d' } },
+{ data: { id: 'TG2', name: 'TG2', colorNODE: '#4b849d' } },
+{ data: { id: 'KES1', name: 'KES1', colorNODE: '#4b849d' } },
+{ data: { id: 'NUA4', name: 'NUA4', colorNODE: '#4b849d' } },
+{ data: { id: 'DYRK3', name: 'DYRK3', colorNODE: '#4b849d' } },
+{ data: { id: 'NCOA3', name: 'NCOA3', colorNODE: '#4b849d' } },
+{ data: { id: 'SAD7', name: 'SAD7', colorNODE: '#4b849d' } },
+{ data: { id: 'AVENACIN', name: 'AVENACIN', colorNODE: '#4b849d' } },
+{ data: { id: 'H3K27AC', name: 'H3K27AC', colorNODE: '#4b849d' } },
+{ data: { id: 'MRG-1', name: 'MRG-1', colorNODE: '#4b849d' } },
+{ data: { id: 'TELOMERASE', name: 'TELOMERASE', colorNODE: '#4b849d' } },
+{ data: { id: 'HTERT', name: 'HTERT', colorNODE: '#4b849d' } },
+{ data: { id: 'DYRK3', name: 'DYRK3', colorNODE: '#4b849d' } },
+{ data: { id: 'ATF4', name: 'ATF4', colorNODE: '#4b849d' } },
+{ data: { id: 'ATM', name: 'ATM', colorNODE: '#4b849d' } },
+{ data: { id: 'UFL1', name: 'UFL1', colorNODE: '#4b849d' } },
+{ data: { id: 'HISTONE H4', name: 'HISTONE H4', colorNODE: '#4b849d' } },
+{ data: { id: 'UFL1', name: 'UFL1', colorNODE: '#4b849d' } },
+{ data: { id: 'HISTONE TARGETS', name: 'HISTONE TARGETS', colorNODE: '#4b849d' } },
+{ data: { id: 'BRD9', name: 'BRD9', colorNODE: '#4b849d' } },
+{ data: { id: 'FEN1', name: 'FEN1', colorNODE: '#4b849d' } },
+{ data: { id: 'P300', name: 'P300', colorNODE: '#4b849d' } },
+{ data: { id: 'POLΙ', name: 'POLΙ', colorNODE: '#4b849d' } },
+{ data: { id: 'PROLIFERATING CELL NUCLEAR ANTIGEN', name: 'PROLIFERATING CELL NUCLEAR ANTIGEN', colorNODE: '#4b849d' } },
+{ data: { id: 'UFL1', name: 'UFL1', colorNODE: '#4b849d' } },
+{ data: { id: 'ATM', name: 'ATM', colorNODE: '#4b849d' } },
+{ data: { id: 'MORC2', name: 'MORC2', colorNODE: '#4b849d' } },
+{ data: { id: 'NAT10', name: 'NAT10', colorNODE: '#4b849d' } },
+{ data: { id: 'POLΙ', name: 'POLΙ', colorNODE: '#4b849d' } },
+{ data: { id: 'REV1', name: 'REV1', colorNODE: '#4b849d' } },
+{ data: { id: 'MORC2', name: 'MORC2', colorNODE: '#4b849d' } },
+{ data: { id: 'HISTONE H3', name: 'HISTONE H3', colorNODE: '#4b849d' } },
+{ data: { id: 'POLΙ', name: 'POLΙ', colorNODE: '#4b849d' } },
+{ data: { id: 'P300 ACETYLTRANSFERASE', name: 'P300 ACETYLTRANSFERASE', colorNODE: '#4b849d' } },
+{ data: { id: 'TYR18', name: 'TYR18', colorNODE: '#4b849d' } },
+{ data: { id: 'ZDHHC3', name: 'ZDHHC3', colorNODE: '#4b849d' } },
+{ data: { id: 'PFKFB4', name: 'PFKFB4', colorNODE: '#4b849d' } },
+{ data: { id: 'SRC-3', name: 'SRC-3', colorNODE: '#4b849d' } },
+{ data: { id: 'ENDOMT', name: 'ENDOMT', colorNODE: '#4b849d' } },
+{ data: { id: 'CPT2', name: 'CPT2', colorNODE: '#4b849d' } },
+{ data: { id: 'Β-CATENIN', name: 'Β-CATENIN', colorNODE: '#4b849d' } },
+{ data: { id: 'CADHERIN PROTEIN', name: 'CADHERIN PROTEIN', colorNODE: '#4b849d' } },
+{ data: { id: 'M MACHR', name: 'M MACHR', colorNODE: '#4b849d' } },
+{ data: { id: 'NACHR', name: 'NACHR', colorNODE: '#4b849d' } },
+{ data: { id: 'BACH1', name: 'BACH1', colorNODE: '#4b849d' } },
+{ data: { id: 'INTERLEUKIN-8', name: 'INTERLEUKIN-8', colorNODE: '#4b849d' } },
+{ data: { id: 'SH3 DOMAIN', name: 'SH3 DOMAIN', colorNODE: '#4b849d' } },
+{ data: { id: 'GRB2', name: 'GRB2', colorNODE: '#4b849d' } },
+{ data: { id: 'STAT3', name: 'STAT3', colorNODE: '#4b849d' } },
+{ data: { id: 'SH2', name: 'SH2', colorNODE: '#4b849d' } },
+{ data: { id: 'Y-FAMILY POLYMERASES', name: 'Y-FAMILY POLYMERASES', colorNODE: '#4b849d' } },
+{ data: { id: 'PCNA', name: 'PCNA', colorNODE: '#4b849d' } },
+{ data: { id: 'WNT', name: 'WNT', colorNODE: '#4b849d' } },
+{ data: { id: 'Β-CATENIN', name: 'Β-CATENIN', colorNODE: '#4b849d' } },
+{ data: { id: 'P65', name: 'P65', colorNODE: '#4b849d' } },
+{ data: { id: 'ACAT-1', name: 'ACAT-1', colorNODE: '#4b849d' } },
+{ data: { id: 'PKN2', name: 'PKN2', colorNODE: '#4b849d' } },
+{ data: { id: 'IL4', name: 'IL4', colorNODE: '#4b849d' } },
+{ data: { id: 'P300', name: 'P300', colorNODE: '#4b849d' } },
+{ data: { id: 'DNA2', name: 'DNA2', colorNODE: '#4b849d' } },
+{ data: { id: 'CBP-1', name: 'CBP-1', colorNODE: '#4b849d' } },
+{ data: { id: 'MRG-1', name: 'MRG-1', colorNODE: '#4b849d' } },
+{ data: { id: 'MORC2 K767AC', name: 'MORC2 K767AC', colorNODE: '#4b849d' } },
+{ data: { id: 'NAT10', name: 'NAT10', colorNODE: '#4b849d' } },
+{ data: { id: 'ACOT', name: 'ACOT', colorNODE: '#4b849d' } },
+{ data: { id: 'ATPASE', name: 'ATPASE', colorNODE: '#4b849d' } },
+{ data: { id: 'POLΙ', name: 'POLΙ', colorNODE: '#4b849d' } },
+{ data: { id: 'UBIQUITIN', name: 'UBIQUITIN', colorNODE: '#4b849d' } },
+{ data: { id: 'HISTONE H4', name: 'HISTONE H4', colorNODE: '#4b849d' } },
+{ data: { id: 'TIP60', name: 'TIP60', colorNODE: '#4b849d' } },
+{ data: { id: 'Β-CATENIN', name: 'Β-CATENIN', colorNODE: '#4b849d' } },
+{ data: { id: 'TCF4', name: 'TCF4', colorNODE: '#4b849d' } },
+{ data: { id: 'PKN2', name: 'PKN2', colorNODE: '#4b849d' } },
+{ data: { id: 'IL10', name: 'IL10', colorNODE: '#4b849d' } },
+{ data: { id: 'STAT3', name: 'STAT3', colorNODE: '#4b849d' } },
+{ data: { id: 'ZDHHC19', name: 'ZDHHC19', colorNODE: '#4b849d' } },
+{ data: { id: 'MYO4', name: 'MYO4', colorNODE: '#4b849d' } },
+{ data: { id: 'ASH1', name: 'ASH1', colorNODE: '#4b849d' } },
+{ data: { id: 'ESCO1', name: 'ESCO1', colorNODE: '#4b849d' } },
+{ data: { id: 'COHESIN', name: 'COHESIN', colorNODE: '#4b849d' } },
+{ data: { id: 'CEC-4', name: 'CEC-4', colorNODE: '#4b849d' } },
+{ data: { id: 'MRG-1', name: 'MRG-1', colorNODE: '#4b849d' } },
+{ data: { id: 'TRA1', name: 'TRA1', colorNODE: '#4b849d' } },
+{ data: { id: 'NUA4', name: 'NUA4', colorNODE: '#4b849d' } },
+{ data: { id: 'TELOMERASE', name: 'TELOMERASE', colorNODE: '#4b849d' } },
+{ data: { id: 'HTR GENES', name: 'HTR GENES', colorNODE: '#4b849d' } },
+{ data: { id: 'ATF4', name: 'ATF4', colorNODE: '#4b849d' } },
+{ data: { id: 'SRC-3', name: 'SRC-3', colorNODE: '#4b849d' } },
+], edges: [
+{ data: { id: 'BACH1-TCF4', source: 'BACH1', target: 'TCF4', confidence:'0.471', colorEDGE: '#cdbb44' }},
+{ data: { id: 'MRG-1-EUCHROMATIN', source: 'MRG-1', target: 'EUCHROMATIN', confidence:'0.387', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PKN2-ERK1/2', source: 'PKN2', target: 'ERK1/2', confidence:'0.382', colorEDGE: '#cdbb44' }},
+{ data: { id: 'POLΙ-PCNA', source: 'POLΙ', target: 'PCNA', confidence:'0.364', colorEDGE: '#cdbb44' }},
+{ data: { id: 'FXIII-A-FCGAMMA', source: 'FXIII-A', target: 'FCGAMMA', confidence:'0.307', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TDP43-ATE1', source: 'TDP43', target: 'ATE1', confidence:'0.28', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TRANSAMIDASE-TG2', source: 'TRANSAMIDASE', target: 'TG2', confidence:'0.276', colorEDGE: '#cdbb44' }},
+{ data: { id: 'KES1-NUA4', source: 'KES1', target: 'NUA4', confidence:'0.276', colorEDGE: '#cdbb44' }},
+{ data: { id: 'DYRK3-NCOA3', source: 'DYRK3', target: 'NCOA3', confidence:'0.271', colorEDGE: '#cdbb44' }},
+{ data: { id: 'SAD7-AVENACIN', source: 'SAD7', target: 'AVENACIN', confidence:'0.253', colorEDGE: '#cdbb44' }},
+{ data: { id: 'H3K27AC-MRG-1', source: 'H3K27AC', target: 'MRG-1', confidence:'0.227', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TELOMERASE-HTERT', source: 'TELOMERASE', target: 'HTERT', confidence:'0.222', colorEDGE: '#cdbb44' }},
+{ data: { id: 'DYRK3-ATF4', source: 'DYRK3', target: 'ATF4', confidence:'0.222', colorEDGE: '#cdbb44' }},
+{ data: { id: 'ATM-UFL1', source: 'ATM', target: 'UFL1', confidence:'0.2', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HISTONE H4-UFL1', source: 'HISTONE H4', target: 'UFL1', confidence:'0.2', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HISTONE TARGETS-BRD9', source: 'HISTONE TARGETS', target: 'BRD9', confidence:'0.182', colorEDGE: '#cdbb44' }},
+{ data: { id: 'FEN1-P300', source: 'FEN1', target: 'P300', confidence:'0.182', colorEDGE: '#cdbb44' }},
+{ data: { id: 'POLΙ-PROLIFERATING CELL NUCLEAR ANTIGEN', source: 'POLΙ', target: 'PROLIFERATING CELL NUCLEAR ANTIGEN', confidence:'0.164', colorEDGE: '#cdbb44' }},
+{ data: { id: 'UFL1-ATM', source: 'UFL1', target: 'ATM', confidence:'0.156', colorEDGE: '#cdbb44' }},
+{ data: { id: 'MORC2-NAT10', source: 'MORC2', target: 'NAT10', confidence:'0.147', colorEDGE: '#cdbb44' }},
+{ data: { id: 'POLΙ-REV1', source: 'POLΙ', target: 'REV1', confidence:'0.147', colorEDGE: '#cdbb44' }},
+{ data: { id: 'MORC2-HISTONE H3', source: 'MORC2', target: 'HISTONE H3', confidence:'0.133', colorEDGE: '#cdbb44' }},
+{ data: { id: 'POLΙ-P300 ACETYLTRANSFERASE', source: 'POLΙ', target: 'P300 ACETYLTRANSFERASE', confidence:'0.133', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TYR18-ZDHHC3', source: 'TYR18', target: 'ZDHHC3', confidence:'0.124', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PFKFB4-SRC-3', source: 'PFKFB4', target: 'SRC-3', confidence:'0.124', colorEDGE: '#cdbb44' }},
+{ data: { id: 'ENDOMT-CPT2', source: 'ENDOMT', target: 'CPT2', confidence:'0.12', colorEDGE: '#cdbb44' }},
+{ data: { id: 'Β-CATENIN-CADHERIN PROTEIN', source: 'Β-CATENIN', target: 'CADHERIN PROTEIN', confidence:'0.12', colorEDGE: '#cdbb44' }},
+{ data: { id: 'M MACHR-NACHR', source: 'M MACHR', target: 'NACHR', confidence:'0.111', colorEDGE: '#cdbb44' }},
+{ data: { id: 'BACH1-INTERLEUKIN-8', source: 'BACH1', target: 'INTERLEUKIN-8', confidence:'0.102', colorEDGE: '#cdbb44' }},
+{ data: { id: 'SH3 DOMAIN-GRB2', source: 'SH3 DOMAIN', target: 'GRB2', confidence:'0.098', colorEDGE: '#cdbb44' }},
+{ data: { id: 'STAT3-SH2', source: 'STAT3', target: 'SH2', confidence:'0.096', colorEDGE: '#cdbb44' }},
+{ data: { id: 'Y-FAMILY POLYMERASES-PCNA', source: 'Y-FAMILY POLYMERASES', target: 'PCNA', confidence:'0.093', colorEDGE: '#cdbb44' }},
+{ data: { id: 'WNT-Β-CATENIN', source: 'WNT', target: 'Β-CATENIN', confidence:'0.093', colorEDGE: '#cdbb44' }},
+{ data: { id: 'P65-ACAT-1', source: 'P65', target: 'ACAT-1', confidence:'0.076', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PKN2-IL4', source: 'PKN2', target: 'IL4', confidence:'0.076', colorEDGE: '#cdbb44' }},
+{ data: { id: 'P300-DNA2', source: 'P300', target: 'DNA2', confidence:'0.076', colorEDGE: '#cdbb44' }},
+{ data: { id: 'CBP-1-MRG-1', source: 'CBP-1', target: 'MRG-1', confidence:'0.076', colorEDGE: '#cdbb44' }},
+{ data: { id: 'MORC2 K767AC-NAT10', source: 'MORC2 K767AC', target: 'NAT10', confidence:'0.067', colorEDGE: '#cdbb44' }},
+{ data: { id: 'ACOT-ATPASE', source: 'ACOT', target: 'ATPASE', confidence:'0.058', colorEDGE: '#cdbb44' }},
+{ data: { id: 'POLΙ-UBIQUITIN', source: 'POLΙ', target: 'UBIQUITIN', confidence:'0.058', colorEDGE: '#cdbb44' }},
+{ data: { id: 'HISTONE H4-TIP60', source: 'HISTONE H4', target: 'TIP60', confidence:'0.053', colorEDGE: '#cdbb44' }},
+{ data: { id: 'Β-CATENIN-TCF4', source: 'Β-CATENIN', target: 'TCF4', confidence:'0.044', colorEDGE: '#cdbb44' }},
+{ data: { id: 'PKN2-IL10', source: 'PKN2', target: 'IL10', confidence:'0.044', colorEDGE: '#cdbb44' }},
+{ data: { id: 'STAT3-ZDHHC19', source: 'STAT3', target: 'ZDHHC19', confidence:'0.04', colorEDGE: '#cdbb44' }},
+{ data: { id: 'MYO4-ASH1', source: 'MYO4', target: 'ASH1', confidence:'0.04', colorEDGE: '#cdbb44' }},
+{ data: { id: 'ESCO1-COHESIN', source: 'ESCO1', target: 'COHESIN', confidence:'0.027', colorEDGE: '#cdbb44' }},
+{ data: { id: 'CEC-4-MRG-1', source: 'CEC-4', target: 'MRG-1', confidence:'0.027', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TRA1-NUA4', source: 'TRA1', target: 'NUA4', confidence:'0.018', colorEDGE: '#cdbb44' }},
+{ data: { id: 'TELOMERASE-HTR GENES', source: 'TELOMERASE', target: 'HTR GENES', confidence:'0.0', colorEDGE: '#cdbb44' }},
+{ data: { id: 'ATF4-SRC-3', source: 'ATF4', target: 'SRC-3', confidence:'0.0', colorEDGE: '#cdbb44' }},
+]
+
+};
+                        cy.load(graphelements);
+                        cy.layout( { name: 'cose' } );
+                    </script>
+                    <script>
+                    $(document).ready(function(){
+                        $('#inttable').DataTable({
+                            "order": [[ 0, "desc" ]]
+                        });
+                        $('#prottable').DataTable({
+                            "order": [[ 1, "desc" ]]
+                        });
+                    });
+                    </script>
+                    
+</body>
+<html>
